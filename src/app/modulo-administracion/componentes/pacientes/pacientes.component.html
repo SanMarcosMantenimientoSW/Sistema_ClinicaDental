@@ -1,0 +1,47 @@
+<mat-toolbar class="barra">
+  <mat-toolbar-row> Listado de pacientes</mat-toolbar-row>
+</mat-toolbar>
+  
+<button mat-fab class="derecha"  matTooltip="Crear nuevo paciente">
+  <mat-icon> add </mat-icon>
+</button>
+
+<mat-card class="card">
+  <form>
+    <mat-grid-list cols=4 rowHeight="70px">
+      <mat-grid-tile colspan=1>
+        <mat-icon>search</mat-icon>
+        <mat-form-field class="columnas-1">
+          <input matInput placeholder="Nombre">
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+
+  <mat-card-content>
+    <mat-table class="mat-elevation-z8">
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="edad">
+        <mat-header-cell *matHeaderCellDef> Edad </mat-header-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="genero">
+        <mat-header-cell *matHeaderCellDef> Género </mat-header-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="celular">
+        <mat-header-cell *matHeaderCellDef> Celular </mat-header-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="correo">
+        <mat-header-cell *matHeaderCellDef> Correo </mat-header-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: columnas;"></mat-row>
+    </mat-table>
+  </mat-card-content>
+</mat-card>
