@@ -5,7 +5,7 @@
 -- Dumped from database version 16rc1
 -- Dumped by pg_dump version 16rc1
 
--- Started on 2023-09-28 20:52:18
+-- Started on 2023-10-05 21:35:31
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 4901 (class 1262 OID 16396)
+-- TOC entry 4906 (class 1262 OID 16396)
 -- Name: clinicadental; Type: DATABASE; Schema: -; Owner: postgres
 --
 
@@ -52,7 +52,7 @@ CREATE SCHEMA public;
 ALTER SCHEMA public OWNER TO pg_database_owner;
 
 --
--- TOC entry 4902 (class 0 OID 0)
+-- TOC entry 4907 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
 --
@@ -98,7 +98,7 @@ CREATE TABLE public.clientes (
     apellido_materno character varying(500) NOT NULL,
     sexo integer NOT NULL,
     peso numeric NOT NULL,
-    telf integer NOT NULL,
+    telf numeric NOT NULL,
     email character varying(100) NOT NULL,
     fecha_registro date NOT NULL,
     estado character varying(5) NOT NULL
@@ -168,6 +168,90 @@ CREATE TABLE public.medicamentos (
 ALTER TABLE public.medicamentos OWNER TO postgres;
 
 --
+-- TOC entry 224 (class 1259 OID 16552)
+-- Name: pacientes1_TMP; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."pacientes1_TMP" (
+    ape_mat character varying(100),
+    ape_pat character varying(100),
+    nombre character varying(200),
+    edad integer,
+    dni numeric,
+    direccion character varying(500),
+    telefono numeric,
+    celular numeric,
+    correo character varying(100),
+    "NOMBRE-2" character varying(50),
+    celular2 integer,
+    column12 character varying(50),
+    column13 character varying(50),
+    column14 character varying(50),
+    column15 character varying(50),
+    column16 character varying(50),
+    column17 character varying(50),
+    column18 character varying(50),
+    column19 character varying(50),
+    column20 character varying(50),
+    column21 character varying(50),
+    column22 character varying(50),
+    column23 character varying(50),
+    column24 character varying(50),
+    column25 character varying(50),
+    column26 character varying(50),
+    column27 character varying(50),
+    column28 character varying(50),
+    column29 character varying(50),
+    column30 character varying(50),
+    column31 character varying(50),
+    column32 character varying(50),
+    column33 character varying(50),
+    column34 character varying(50),
+    column35 character varying(50),
+    column36 character varying(50),
+    column37 character varying(50),
+    column38 character varying(50),
+    column39 character varying(50),
+    column40 character varying(50),
+    column41 character varying(50),
+    column42 character varying(50),
+    column43 character varying(50),
+    column44 character varying(50),
+    column45 character varying(50),
+    column46 character varying(50),
+    column47 character varying(50),
+    column48 character varying(50),
+    column49 character varying(50),
+    column50 character varying(50),
+    column51 character varying(50),
+    column52 character varying(50),
+    column53 character varying(50),
+    column54 character varying(50),
+    column55 character varying(50),
+    column56 character varying(50),
+    column57 character varying(50),
+    column58 character varying(50),
+    column59 character varying(50),
+    column60 character varying(50),
+    column61 character varying(50),
+    column62 character varying(50),
+    column63 character varying(50),
+    column64 character varying(50),
+    column65 character varying(50),
+    column66 character varying(50),
+    column67 character varying(50),
+    column68 character varying(50),
+    column69 character varying(50),
+    column70 character varying(50),
+    column71 character varying(50),
+    column72 character varying(50),
+    column73 character varying(50)
+);
+
+
+ALTER TABLE public."pacientes1_TMP" OWNER TO postgres;
+
+--
 -- TOC entry 218 (class 1259 OID 16430)
 -- Name: sedes; Type: TABLE; Schema: public; Owner: postgres
 --
@@ -211,7 +295,7 @@ CREATE TABLE public.tipos_documentos (
 ALTER TABLE public.tipos_documentos OWNER TO postgres;
 
 --
--- TOC entry 4893 (class 0 OID 16469)
+-- TOC entry 4897 (class 0 OID 16469)
 -- Dependencies: 221
 -- Data for Name: citas; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -219,15 +303,478 @@ ALTER TABLE public.tipos_documentos OWNER TO postgres;
 
 
 --
--- TOC entry 4892 (class 0 OID 16452)
+-- TOC entry 4896 (class 0 OID 16452)
 -- Dependencies: 220
 -- Data for Name: clientes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.clientes VALUES (1, 1, 1, 713254440, 'JHONATAN', 'ABARCA', 'SALVADOR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (2, 1, 1, 713254440, 'PIERO', 'ABARCA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (3, 1, 1, 713254440, 'MATIAs', 'ACOSTA', 'ABARCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (4, 1, 1, 713254440, 'ANITA', 'ACOSTA ', 'GARCIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (5, 1, 1, 713254440, 'JENNY', 'ACOSTA ', 'GARCIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (6, 1, 1, 713254440, 'VICTOR', 'ACU�A', 'RAMOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (7, 1, 1, 713254440, 'OSCAR', 'AGUILAR', 'RODRIGUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (8, 1, 1, 713254440, 'OFELIA', 'AGUILAR ', 'SOTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (9, 1, 1, 713254440, 'ELBA', 'ALARCON', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (10, 1, 1, 713254440, 'LOLA', 'ALARCON', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (11, 1, 1, 713254440, 'IRMA', 'ALARCON', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (12, 1, 1, 713254440, 'ALICIA', 'ALCANTARA', 'SAAVEDRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (13, 1, 1, 713254440, 'MARIA', 'ALVAREZ', 'CASTILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (14, 1, 1, 713254440, 'BRISA', 'AMARO', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (15, 1, 1, 713254440, 'ANGELICA', 'AMARO', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (16, 1, 1, 713254440, 'XHIANG', 'AMBROSIO', 'RUIZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (17, 1, 1, 713254440, 'ARCELIA', 'ANTIVEROS', 'COSME', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (18, 1, 1, 713254440, 'RENE', 'ANTONIO', 'CUNTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (19, 1, 1, 713254440, 'JENNY', 'APE�A', 'RORALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (20, 1, 1, 713254440, 'MARIA', 'APE�A', 'RORALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (21, 1, 1, 713254440, 'ANGELA', 'APONTE', 'IRRIGARRI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (22, 1, 1, 713254440, 'ALEXANDER', 'AQUIJE', 'MADUE�O', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (23, 1, 1, 713254440, 'JAZMIN', 'ARAUJO', 'MORENO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (24, 1, 1, 713254440, 'ANGELICA', 'ARAUJO', 'MORENO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (25, 1, 1, 713254440, 'SARA', 'ARAUZ', 'SALINAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (26, 1, 1, 713254440, 'ELVIA', 'ARGUME', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (27, 1, 1, 713254440, 'ELVIA', 'ARGUME', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (28, 1, 1, 713254440, 'ERIKA', 'ARI', 'BAUTISTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (29, 1, 1, 713254440, 'JOSEPH', 'ARRASCUE', 'CARRILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (30, 1, 1, 713254440, 'JULIO', 'ARRASCUE', 'CARRASCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (31, 1, 1, 713254440, 'ERICK', 'ATOCZA', 'MENZALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (32, 1, 1, 713254440, 'LURDES', 'ATOCZA', 'MENZALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (33, 1, 1, 713254440, 'MELISSA', 'AYLAS', 'MENESES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (34, 1, 1, 713254440, 'WILFREDO', 'BACHON', 'AREVALO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (35, 1, 1, 713254440, 'WILFREDO', 'BACHON', 'ALVAREEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (36, 1, 1, 713254440, 'ANGIE', 'BALBUENA', 'MARTINEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (37, 1, 1, 713254440, 'JESUS', 'BALBUENA', 'RIVAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (38, 1, 1, 713254440, 'ANGIE', 'BALBUENA', 'MARTINEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (39, 1, 1, 713254440, 'CARLOS', 'BALCARCEL', 'VELEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (40, 1, 1, 713254440, 'GILBERTO', 'BANDA', 'YASPANA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (41, 1, 1, 713254440, 'NELSON', 'BANDAN', 'GRACIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (42, 1, 1, 713254440, 'ESTHEFANY', 'BARDALES', 'VALENZUELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (43, 1, 1, 713254440, 'EMANUEL', 'BARDALES', 'VALENZUELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (44, 1, 1, 713254440, 'GUILLERMO', 'BARRANTES', 'MONDRAGON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (45, 1, 1, 713254440, 'SANDRA', 'BARRETO', 'ROMERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (46, 1, 1, 713254440, 'SANDRO', 'BARRIGA', 'OLIVERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (47, 1, 1, 713254440, 'WALTER', 'BARZOLA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (48, 1, 1, 713254440, 'PASTORA', 'BAZAN', 'SANTACRUZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (49, 1, 1, 713254440, 'OSCAR', 'BECERRA', 'MONDRAGON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (50, 1, 1, 713254440, 'ARACELI', 'BECERRA', 'BERROCAL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (51, 1, 1, 713254440, 'SEGUNDO', 'BECERRA', 'MONDRAGON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (52, 1, 1, 713254440, 'GRIMALDO', 'BECERRA', 'MONDRAGON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (53, 1, 1, 713254440, 'LUZ ', 'BECERRA', 'IGREDA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (54, 1, 1, 713254440, 'ELEUTERIO', 'BERROCAL', 'CASTILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (55, 1, 1, 713254440, 'IRIS', 'BERROCAL', 'CASTILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (56, 1, 1, 713254440, 'FABRICIO', 'BERROCAL', 'BUITRON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (57, 1, 1, 713254440, '', 'BERROCAL', 'HERRERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (58, 1, 1, 713254440, 'JESSICA', 'BERROCAL', 'HERRERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (59, 1, 1, 713254440, 'ROLANDO', 'BERROSPI', 'SOVERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (60, 1, 1, 713254440, 'KEVIN', 'BERROSPI', 'CANTERAC', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (61, 1, 1, 713254440, 'EDITH', 'BURGOS', 'AQUINO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (62, 1, 1, 713254440, 'SALIN', 'CABALLERO', 'BARBOZA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (63, 1, 1, 713254440, 'FLOR', 'CABALLERO', 'TOLENTINO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (64, 1, 1, 713254440, 'SUSY', 'CABALLERO', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (65, 1, 1, 713254440, 'MARECORY', 'CABRERA', 'VILLANUEVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (66, 1, 1, 713254440, 'JOSE', 'CACERES', 'MOSCOSO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (67, 1, 1, 713254440, 'JOSE', 'CACERES', 'MOSCOSO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (68, 1, 1, 713254440, 'JAVIER', 'CALDERON', 'LETONA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (69, 1, 1, 713254440, 'LESLY', 'CALDERON', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (70, 1, 1, 713254440, 'JAVIER', 'CALDERON', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (71, 1, 1, 713254440, 'JAVIER', 'CALDERON', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (72, 1, 1, 713254440, 'LESLY', 'CALDERON', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (73, 1, 1, 713254440, 'ELENA', 'CALDERON ', 'TENAZOA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (74, 1, 1, 713254440, 'LUZ', 'CAMPOS', 'CARDENAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (75, 1, 1, 713254440, 'ASUNCION', 'CAMPOS', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (76, 1, 1, 713254440, 'VICTOR', 'CANTARO', 'AYALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (77, 1, 1, 713254440, 'VICTOR', 'CANTARO', 'AYALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (78, 1, 1, 713254440, 'ANTONY', 'CARBAJAL', 'PALOMINO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (79, 1, 1, 713254440, 'VICTOR', 'CARDENAS', 'RIVERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (80, 1, 1, 713254440, 'SHEYLA', 'CARDENAS ', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (81, 1, 1, 713254440, 'LUZ', 'CARDENAZ', 'DE CAMPOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (82, 1, 1, 713254440, 'JAVIER', 'CARDERON', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (83, 1, 1, 713254440, 'JAVIER', 'CARDRON', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (84, 1, 1, 713254440, 'ALEX', 'CARRILLO', 'MONTOYA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (85, 1, 1, 713254440, 'DIANA', 'CARRILLO', 'TORRES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (86, 1, 1, 713254440, 'JOLY', 'CARRION', 'SANCHEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (87, 1, 1, 713254440, 'DORIS', 'CASTA�EDA', 'SANCHEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (88, 1, 1, 713254440, 'VICTORIA', 'CASTILLO', 'AYCHO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (89, 1, 1, 713254440, 'INES', 'CASTILLO', 'DUARTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (90, 1, 1, 713254440, 'ENRRIQUE', 'CASTILLO', 'DUARTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (91, 1, 1, 713254440, 'PRIMITIVA', 'CCOPA', 'AYVAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (92, 1, 1, 713254440, 'BERTHA', 'CCOPA', 'AYVAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (93, 1, 1, 713254440, 'NANCY', 'CENTENO', 'VILLANUEVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (94, 1, 1, 713254440, 'NANCY', 'CENTENO', 'VILLANUEVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (95, 1, 1, 713254440, 'ELENA', 'CESPEDES', 'HUISA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (96, 1, 1, 713254440, 'MARTIN', 'CHACALIAZA', 'RIVERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (97, 1, 1, 713254440, 'LIZ', 'CHAMOLI', 'VELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (98, 1, 1, 713254440, 'MARIANO', 'CHAMOLI', 'AGUILAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (99, 1, 1, 713254440, 'VALENTINA', 'CHAMONES ', 'ROJAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (100, 1, 1, 713254440, 'MARCO', 'CHAMONES ', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (101, 1, 1, 713254440, 'JOSE', 'CHAPA�AN', 'IPARRAGUIRRE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (102, 1, 1, 713254440, 'CARLOS', 'CHAPA�AN', 'ACOSTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (103, 1, 1, 713254440, 'NICANOR', 'CHARLE', 'MONDACA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (104, 1, 1, 713254440, 'ALBERTO', 'CHAVARRI', 'TORRES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (105, 1, 1, 713254440, 'PEDRO', 'CHAVEZ', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (106, 1, 1, 713254440, 'YENY', 'CHINGUEL', 'UNTOL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (107, 1, 1, 713254440, 'DIEGO', 'CHOZO', 'OCHOA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (108, 1, 1, 713254440, 'DIEGO', 'CHOZO', 'OCHOA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (109, 1, 1, 713254440, 'SAMANTHA', 'CIPRIAN ', 'PARIONA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (110, 1, 1, 713254440, 'ANGEL', 'COLLAHUA', 'ORIHUELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (111, 1, 1, 713254440, 'YADIRA', 'COLLANTES', 'ORIHUELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (112, 1, 1, 713254440, 'ANGELO', 'COLQUEHUANCA ', 'VALVERDE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (113, 1, 1, 713254440, 'KATTY', 'COLQUI', 'RODRIGUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (114, 1, 1, 713254440, 'LUCERO', 'COLQUI', 'RODRIGUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (115, 1, 1, 713254440, 'HENRRY', 'CORDOVA', 'CORDOVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (116, 1, 1, 713254440, 'ROLY', 'CORDOVA', 'MAMANI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (117, 1, 1, 713254440, 'JUNIOR', 'CORDOVA', 'GARCIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (118, 1, 1, 713254440, 'JASURI', 'CORDOVA', 'GARCIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (119, 1, 1, 713254440, 'MERI', 'CORDOVA', 'ALEGRIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (120, 1, 1, 713254440, 'CARMEN', 'CORONADO', 'ELIZABAL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (121, 1, 1, 713254440, 'ANGELICA', 'CORONADO', 'ROJAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (122, 1, 1, 713254440, 'MARITZA', 'CORTEZ', 'VELIZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (123, 1, 1, 713254440, 'ANA', 'CORTEZ', 'VIDAL ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (124, 1, 1, 713254440, 'PATY', 'CORTEZ', 'VIDAL ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (125, 1, 1, 713254440, 'NOEMI', 'CRISOSTOMO', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (126, 1, 1, 713254440, 'GALVINA', 'CRUZ', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (127, 1, 1, 713254440, 'MAGALI', 'CUADROS', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (128, 1, 1, 713254440, 'GIAN', 'CUADROS', 'COVEMAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (129, 1, 1, 713254440, 'JHONNY', 'CUBAS', 'ALARCON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (130, 1, 1, 713254440, 'MELANY', 'CUEVA', 'VARA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (131, 1, 1, 713254440, 'ENRRIQUE', 'CUEVA', 'SIMON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (132, 1, 1, 713254440, 'JESUS', 'CUEVAS', 'SIMON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (133, 1, 1, 713254440, 'FAUSTO', 'CUIPAN', 'YOPAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (134, 1, 1, 713254440, 'ANGEL', 'DAVILA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (135, 1, 1, 713254440, 'LUZ', 'DEL RIO', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (136, 1, 1, 713254440, 'JORGE', 'DEL RIO', 'PEREDO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (137, 1, 1, 713254440, 'ROCIO', 'DEL RIO', 'BECERRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (138, 1, 1, 713254440, 'JORGE', 'DEL RIO', 'FEREDO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (139, 1, 1, 713254440, 'JENNY', 'DEL RIO', 'BECERRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (140, 1, 1, 713254440, 'EBERZON', 'DIAZ', 'ALARCON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (141, 1, 1, 713254440, 'EDUARDO', 'DIAZ', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (142, 1, 1, 713254440, 'ALICIA', 'DIAZ', 'BARRANTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (143, 1, 1, 713254440, 'ANALY', 'DIAZ', 'GUERRERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (144, 1, 1, 713254440, 'AMADO', 'DIAZ', 'CUBAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (145, 1, 1, 713254440, 'ANALI', 'DIAZ', 'GUERRERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (146, 1, 1, 713254440, 'ALICIA', 'DIAZ', 'BARRANTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (147, 1, 1, 713254440, 'JHONY', 'DIEGO', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (148, 1, 1, 713254440, 'FANNY', 'DOMINGUEZ', 'CARRION', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (149, 1, 1, 713254440, 'ZORAIDA', 'DUE�AS', 'VARA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (150, 1, 1, 713254440, 'ANGIE', 'ESCALANTE', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (151, 1, 1, 713254440, 'IRMA', 'ESCOBAR', 'PINEDA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (152, 1, 1, 713254440, 'IRMA', 'ESCOBAR', 'PI�EDA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (153, 1, 1, 713254440, 'DANIEL', 'ESPINOZA', 'ROMAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (154, 1, 1, 713254440, 'GUSTAVO', 'ESPINOZA', 'ROMAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (155, 1, 1, 713254440, 'MIRIAN', 'ESPINOZA', 'ROMAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (156, 1, 1, 713254440, 'MARIBEL', 'ESTRADA ', 'SANTOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (157, 1, 1, 713254440, 'LEONARDO', 'FAJARDO', 'ZELADA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (158, 1, 1, 713254440, 'MARIA', 'FILIOS', 'BEDOYA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (159, 1, 1, 713254440, 'JESSICA', 'FLORES', 'SANCHEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (160, 1, 1, 713254440, 'LUZ', 'FLORES', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (161, 1, 1, 713254440, 'PILAR', 'FLORES', 'LESCANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (162, 1, 1, 713254440, 'MARIA', 'FLORES', 'CARRASCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (163, 1, 1, 713254440, 'MAXIMA', 'FLORES', 'ROSALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (164, 1, 1, 713254440, 'MARIBEL', 'FLORES', 'GIMA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (165, 1, 1, 713254440, 'JHON', 'FLORES', 'CAHUATA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (166, 1, 1, 713254440, 'YNER', 'FLORES', 'RAMOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (167, 1, 1, 713254440, 'CROMACIO', 'FUERTES', 'HILARIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (168, 1, 1, 713254440, 'FAUSTINA', 'GAMARRA', 'MORALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (169, 1, 1, 713254440, 'GLADYS', 'GARRIDO', 'CARRION', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (170, 1, 1, 713254440, 'JUDITH', 'GIL', 'PEREZ', 1, 50, 11111, 'yudell2011@gmail.com', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (171, 1, 1, 713254440, 'MARITZA', 'GOMEZ', 'ATANACIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (172, 1, 1, 713254440, 'FELIX', 'GONZALES ', 'VILLANUEVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (173, 1, 1, 713254440, 'ALCIRA', 'GUERRERO', 'AGUILAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (174, 1, 1, 713254440, 'NELLY', 'GUERRERO', 'ALARCON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (175, 1, 1, 713254440, 'TERESA', 'GUERREROS', 'ORE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (176, 1, 1, 713254440, 'CECILIA', 'GUEVARA', 'ORIHUIELA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (177, 1, 1, 713254440, 'THAMARA', 'GUEVARA', 'MAYUNTUPA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (178, 1, 1, 713254440, 'AMERICO', 'GUTIERREZ', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (179, 1, 1, 713254440, 'VALENTIN', 'HERCARNACION', 'VILLANUEVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (180, 1, 1, 713254440, 'JESSENIA', 'HERNANDEZ', 'LEON', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (181, 1, 1, 713254440, 'DANIELLY', 'HERRERA', 'OBLITAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (182, 1, 1, 713254440, 'ISABEL', 'HUAMAN', 'GAMARRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (183, 1, 1, 713254440, 'MILUSCA ', 'HUAMAN', 'REYES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (184, 1, 1, 713254440, 'ELENA', 'HUAMAN', 'RAMOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (185, 1, 1, 713254440, 'ISABEL', 'HUAMAN', 'GAMARRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (186, 1, 1, 713254440, 'KAREN', 'HUAMAN', 'MONTOYA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (187, 1, 1, 713254440, 'IVETTE', 'HUAMANCHANQUI ', 'CORONADO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (188, 1, 1, 713254440, 'HECTOR', 'HUAMANCHANQUI ', 'CORONADO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (189, 1, 1, 713254440, 'IVETH', 'HUAMANCHAQUI', 'CORONADO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (190, 1, 1, 713254440, 'NICANOR', 'HUANCAHUARI', 'TENORIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (191, 1, 1, 713254440, 'EDITH', 'HUANCAHUARI', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (192, 1, 1, 713254440, 'HECTOR', 'HUANCHAQUI', 'CORONADO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (193, 1, 1, 713254440, 'VICTORIA', 'HUAYTAN', 'HILARIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (194, 1, 1, 713254440, 'EDGAR', 'HUERTA', 'SAMBRANA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (195, 1, 1, 713254440, 'NATHALY', 'INFANTES', 'POLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (196, 1, 1, 713254440, 'MARIA', 'IPANAQUE', 'DE SOSA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (197, 1, 1, 713254440, 'ANDRES', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (198, 1, 1, 713254440, 'DELIA', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (199, 1, 1, 713254440, 'MABEL', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (200, 1, 1, 713254440, 'EDUBISES', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (201, 1, 1, 713254440, 'SANTOS', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (202, 1, 1, 713254440, 'ARTURO', 'IPARRAGUIRRE', 'SIESQUIEN ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (203, 1, 1, 713254440, 'VICKY', 'IPARRAGUIRRE', 'VASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (204, 1, 1, 713254440, 'ANTONY', 'IPARRAGUIRRE', 'SIESQUIEN ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (205, 1, 1, 713254440, 'JORGE', 'JIMENEZ', 'MENDOZA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (206, 1, 1, 713254440, 'GABRIELA', 'JOPAN', 'CHAVEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (207, 1, 1, 713254440, 'GLADYS', 'JULCA', 'VARGAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (208, 1, 1, 713254440, 'VICTOR', 'JUSCAMAITA', 'QUISPE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (209, 1, 1, 713254440, 'LUIS', 'JUSCAMAITA', 'QUISPE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (210, 1, 1, 713254440, 'PEPE', 'JUSCAMAITA', 'QUISPE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (211, 1, 1, 713254440, 'JORGE', 'JUSCAMAITA', 'QUISPE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (212, 1, 1, 713254440, 'IRIS', 'JUSCAMAITA', 'RICO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (213, 1, 1, 713254440, 'HERENIA', 'LA  VALLE', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (214, 1, 1, 713254440, 'ANDREA', 'LAGOS', 'REYES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (215, 1, 1, 713254440, 'MANUEL', 'LAGOS', 'SOTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (216, 1, 1, 713254440, 'JORGE', 'LAGOZ', 'SOTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (217, 1, 1, 713254440, 'JESUS', 'LAZO', 'TAPIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (218, 1, 1, 713254440, 'KIARA', 'LAZO', 'TAPIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (219, 1, 1, 713254440, 'DAVID', 'LEIVA', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (220, 1, 1, 713254440, 'CARMEN', 'LEON', 'DE AYARSA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (221, 1, 1, 713254440, 'ELVA', 'LIVIA', 'IGREGA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (222, 1, 1, 713254440, 'DAVID', 'LIZAMA', 'ALIAGA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (223, 1, 1, 713254440, 'JESSICA', 'LIZAMA', 'BENITES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (224, 1, 1, 713254440, 'JACKELIN ', 'LLACHUA', 'SEDANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (225, 1, 1, 713254440, 'JESUS', 'LLACHUA', 'SEDANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (226, 1, 1, 713254440, 'AMELIA', 'LLACTAYO', 'ARIAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (227, 1, 1, 713254440, 'JULIANA', 'LLANTO ', 'VILLAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (228, 1, 1, 713254440, 'ESTHER', 'LOAYZA', 'POVEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (229, 1, 1, 713254440, 'FELIX', 'LOPEZ', 'DE LA CRUZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (230, 1, 1, 713254440, 'ROGGER', 'LOPEZ', 'ALFARO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (231, 1, 1, 713254440, 'JHONY', 'LOPEZ', 'CHIRINOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (232, 1, 1, 713254440, 'JAIME', 'LOPEZ', 'MENDIETA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (233, 1, 1, 713254440, 'FABRICIO', 'LOPEZ ', 'QUIJANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (234, 1, 1, 713254440, 'JENY', 'LUJAN', 'CARRION', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (235, 1, 1, 713254440, 'ANTONIO', 'MALDONADO', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (236, 1, 1, 713254440, 'HECTOR', 'MALDONADO', 'CARDENAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (237, 1, 1, 713254440, 'HECTOR', 'MALDONADO', 'CORDOVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (238, 1, 1, 713254440, 'JAO', 'MALDONADO', 'CORDOVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (239, 1, 1, 713254440, 'MILAGROS', 'MALO', 'BARZOLA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (240, 1, 1, 713254440, 'ANDREA', 'MALO', 'BARZOLA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (241, 1, 1, 713254440, 'ANDREA', 'MALO', 'BARZOLA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (242, 1, 1, 713254440, 'PEDRO', 'MAMANI', 'COSQUILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (243, 1, 1, 713254440, 'ROSARIO', 'MAMANI', 'MAMANI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (244, 1, 1, 713254440, 'YULEYDI', 'MANCHEGO', 'CHERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (245, 1, 1, 713254440, 'JOSELITO', 'MARI�AS', 'SILVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (246, 1, 1, 713254440, 'MARITZA', 'MARINEZ', 'ALVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (247, 1, 1, 713254440, 'GRACIELA', 'MARRE�O', 'MORALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (248, 1, 1, 713254440, 'HASION', 'MARTEL', 'TORRES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (249, 1, 1, 713254440, '', 'MARTINEZ', 'ROCHA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (250, 1, 1, 713254440, 'MONICA', 'MARTINEZ', 'ALVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (251, 1, 1, 713254440, 'LUCIANO', 'MARTINEZ', 'MELGAREJO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (252, 1, 1, 713254440, 'TANIA', 'MAYUNTUPA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (253, 1, 1, 713254440, 'IKEYA', 'MAYUNTUPA', 'CASTILLONI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (254, 1, 1, 713254440, 'MANUEL', 'MELENDEZ', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (255, 1, 1, 713254440, 'NAYSHA', 'MENA', 'CCANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (256, 1, 1, 713254440, 'JUAN', 'MENA', 'CCANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (257, 1, 1, 713254440, 'MAGNA', 'MENDOZA', 'ALCANTARA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (258, 1, 1, 713254440, 'JADIRA', 'MENDOZA', 'CESPEDES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (259, 1, 1, 713254440, 'MALAQUIES', 'MENDOZA', 'CESPEDES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (260, 1, 1, 713254440, 'HUGO', 'MENDOZA', 'MANCHA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (261, 1, 1, 713254440, 'MIGUEL', 'MENDOZA', 'CARRANZA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (262, 1, 1, 713254440, 'HAIDE', 'MENESES', 'PIMENTEL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (263, 1, 1, 713254440, 'ANGIELINA', 'MERCHI', 'MERCI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (264, 1, 1, 713254440, 'ARON', 'MERINO', 'ORTEGA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (265, 1, 1, 713254440, 'LUZ', 'MINAYA', 'RIVERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (266, 1, 1, 713254440, 'NILA', 'MINAYA', 'SIGUE�AS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (267, 1, 1, 713254440, 'IRMA', 'MNTOYA', 'PIMENTEL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (268, 1, 1, 713254440, 'FERNANDO', 'MOISES', 'ORE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (269, 1, 1, 713254440, 'ISABEL', 'MOISES', 'CAPILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (270, 1, 1, 713254440, 'FERNANDO', 'MOLINA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (271, 1, 1, 713254440, 'WILFREDO', 'MONTESINOS', 'LUNA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (272, 1, 1, 713254440, 'EMILIO', 'MONTOYA', 'VILLACIS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (273, 1, 1, 713254440, 'ANGELICA', 'MONTOYA', 'MEJIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (274, 1, 1, 713254440, 'SOLANSH', 'MOSQUIRO', 'DIAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (275, 1, 1, 713254440, 'JESSICA', 'MOSQUITO', 'LIVIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (276, 1, 1, 713254440, 'NANCY', 'MOSQUITO', 'LIVIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (277, 1, 1, 713254440, 'MANUEL', 'MOSQUITO ', 'SILVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (278, 1, 1, 713254440, 'TEOFILO', 'MU�OZ', 'GONZALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (279, 1, 1, 713254440, 'ANA', 'MU�OZ', 'PERALTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (280, 1, 1, 713254440, 'ALEJANDRO', 'MURGA', 'CARRERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (281, 1, 1, 713254440, 'AGUSTIN', 'NARCISO', 'BELTRAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (282, 1, 1, 713254440, 'FONSECA', 'NU�EZ', 'FRANCISCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (283, 1, 1, 713254440, 'JOEL', 'OCHOA', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (284, 1, 1, 713254440, 'PATRICIA', 'OCHOA', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (285, 1, 1, 713254440, 'JOEL', 'OCHOA', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (286, 1, 1, 713254440, 'ISAMAR', 'OCUMANA', 'CORDOVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (287, 1, 1, 713254440, 'JOSE', 'OLAYA', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (288, 1, 1, 713254440, 'JOSE', 'OLIVERA ', 'JORGE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (289, 1, 1, 713254440, 'RAUL', 'ORDINOLA', 'QUISPE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (290, 1, 1, 713254440, 'FERNANDO', 'ORE', 'MOISES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (291, 1, 1, 713254440, 'GIANNA', 'ORELLANO', 'ROMERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (292, 1, 1, 713254440, 'ARACELI', 'ORIHUELA', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (293, 1, 1, 713254440, 'CECILIA', 'ORIHUELA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (294, 1, 1, 713254440, 'MIRTHA', 'ORIHUELA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (295, 1, 1, 713254440, 'CECILIA', 'ORIHUELA ', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (296, 1, 1, 713254440, 'CARMEN', 'ORTIZ', 'VILLAFUERTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (297, 1, 1, 713254440, 'ALFONSO', 'OSCO', 'FAJARDO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (298, 1, 1, 713254440, 'SULY', 'OSCO', 'IRRAZABAL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (299, 1, 1, 713254440, 'KATHERINE', 'OYOLA ', 'ENCISO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (300, 1, 1, 713254440, 'CARLOS', 'OYOLA ', 'ENCISO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (301, 1, 1, 713254440, 'BRAYAN', 'PACHECO', 'CONSAMUYO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (302, 1, 1, 713254440, 'LUCIANA', 'PACHECO', 'CONSAMUYO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (303, 1, 1, 713254440, 'MARUJA', 'PALACIOS', 'SILVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (304, 1, 1, 713254440, 'KATIUSKA', 'PALOMINO', 'MACAVILCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (305, 1, 1, 713254440, 'ESTHEFANY', 'PALOMINO', 'PAYANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (306, 1, 1, 713254440, 'JOSE', 'PALOMINO', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (307, 1, 1, 713254440, 'CIELO', 'PALOMINO', 'SALAZAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (308, 1, 1, 713254440, 'EDGAR', 'PALOMINO ', 'ALVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (309, 1, 1, 713254440, 'MARISOL', 'PARADA', 'FERNANDEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (310, 1, 1, 713254440, 'BLANCA', 'PARI', 'GAMBARINI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (311, 1, 1, 713254440, 'JEFFERSON', 'PARIONA', 'ROJAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (312, 1, 1, 713254440, 'KEVIN', 'PARIONA', 'ROJAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (313, 1, 1, 713254440, 'CELIA', 'PARIONA', 'PRIALE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (314, 1, 1, 713254440, 'GABRIELA', 'PARIONA', 'MINAYA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (315, 1, 1, 713254440, 'JUVENAL', 'PARIONA', 'CARDENAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (316, 1, 1, 713254440, 'CELIA', 'PARIONA', 'PRIALE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (317, 1, 1, 713254440, 'TONY', 'PAUCAR', 'DANAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (318, 1, 1, 713254440, 'TONY', 'PAUCAR', 'DANAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (319, 1, 1, 713254440, 'SUSANA', 'PAZ', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (320, 1, 1, 713254440, 'ALEXANDRA', 'PE�ALOZA', 'ORCOSPOMA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (321, 1, 1, 713254440, 'FERNANDO', 'PEREZ', 'DEL RIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (322, 1, 1, 713254440, 'ANGEL', 'PEREZ', 'DEL RIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (323, 1, 1, 713254440, 'NORBERTO', 'PEREZ', 'BARRANTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (324, 1, 1, 713254440, 'JAVIER', 'PEREZ', 'RAMIREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (325, 1, 1, 713254440, 'CESIA', 'PEREZ', 'SALAZAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (326, 1, 1, 713254440, 'OMAR', 'PIZARRO', 'IPARRAGUIRRE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (327, 1, 1, 713254440, 'CHARLI', 'PLAZA ', 'DIAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (328, 1, 1, 713254440, 'JUANA', 'POLO', 'ROCCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (329, 1, 1, 713254440, 'MARIANELA', 'POLO', 'ROCCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (330, 1, 1, 713254440, 'JHONNY', 'PORRAS', 'CORTEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (331, 1, 1, 713254440, 'ANDRES', 'PORRAS', 'POLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (332, 1, 1, 713254440, 'ANDREA', 'PORRAS', 'POLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (333, 1, 1, 713254440, 'VICENTA', 'PORTILLA', 'MATOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (334, 1, 1, 713254440, 'FERNANDO', 'PRADO', 'CUNTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (335, 1, 1, 713254440, 'GILMER', 'QUINTANA', 'PILCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (336, 1, 1, 713254440, 'MIRIAN', 'QUINTEROS ', 'VARGAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (337, 1, 1, 713254440, 'EVA', 'QUISPE', 'MEJIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (338, 1, 1, 713254440, 'MINERVA', 'QUISPE', 'ARGUME', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (339, 1, 1, 713254440, 'MONICA', 'QUISPE', 'MIJA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (340, 1, 1, 713254440, 'DIEGO', 'QUISPE', 'MIJA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (341, 1, 1, 713254440, 'HAYELEN', 'RAFAEL', 'PAUCAR', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (342, 1, 1, 713254440, 'NELLY', 'RAMIREZ', 'FERNANDEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (343, 1, 1, 713254440, 'HEBER', 'RAMIREZ', 'OCHOA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (344, 1, 1, 713254440, 'DAVID', 'RAMIREZ', 'INFANTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (345, 1, 1, 713254440, 'SUSANA', 'RAMIREZ', 'FERNANDEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (346, 1, 1, 713254440, 'KATHERINE', 'RAMIREZ', 'CARRISALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (347, 1, 1, 713254440, 'ANNY', 'RAMOS', 'LLANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (348, 1, 1, 713254440, 'ANNY', 'RAMOS', 'LLANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (349, 1, 1, 713254440, 'RENZO', 'RAMOS', 'LLANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (350, 1, 1, 713254440, 'VALENTINO', 'REA�O ', 'SANCHEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (351, 1, 1, 713254440, 'EDELMIRA', 'REBASA', 'CACEDA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (352, 1, 1, 713254440, 'ANTUANE', 'REMOS', 'LLANTO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (353, 1, 1, 713254440, 'ISABEL', 'RETUERTO', 'DOMINGUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (354, 1, 1, 713254440, 'DAILY', 'REYES', 'MARIN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (355, 1, 1, 713254440, 'BRENDA', 'REYES', 'GALARZA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (356, 1, 1, 713254440, 'WALTER', 'RICO', 'VELARDE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (357, 1, 1, 713254440, 'KIMBERLY', 'RICO', 'PALACIOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (358, 1, 1, 713254440, 'NICOLAS', 'RIPAS ', 'ESCAJADILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (359, 1, 1, 713254440, 'CRISTHIAN', 'RIVAS', 'PAREDES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (360, 1, 1, 713254440, 'AIDA', 'RIVERA', 'DE ALCALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (361, 1, 1, 713254440, 'AIDA', 'RIVERA', 'CUZCANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (362, 1, 1, 713254440, 'OLGA', 'ROCCA', 'GARCIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (363, 1, 1, 713254440, 'GLORIA', 'RODRIGUEZ', 'PAEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (364, 1, 1, 713254440, 'GLORIA', 'RODRIGUEZ', 'PAEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (365, 1, 1, 713254440, 'JOSE', 'RODRIGUEZ', 'MINAYA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (366, 1, 1, 713254440, 'ALFREDO', 'ROJAS', 'SABA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (367, 1, 1, 713254440, 'FELICITA', 'ROJAS', 'SANCHEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (368, 1, 1, 713254440, 'JAIRA', 'ROSAS', 'PAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (369, 1, 1, 713254440, 'JAIRA', 'ROSAS', 'PAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (370, 1, 1, 713254440, 'JUAN', 'ROSAS', 'RAMOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (371, 1, 1, 713254440, 'ELENA', 'SAENZ', 'URETA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (372, 1, 1, 713254440, 'ROSA', 'SAIRE', 'SIFUENTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (373, 1, 1, 713254440, 'FRANCISCO', 'SALAZAR', 'OLIVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (374, 1, 1, 713254440, 'SUSANA', 'SALAZAR ', 'BAUTISTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (375, 1, 1, 713254440, 'RICARDO', 'SALVATIERRA', 'ISIDDRO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (376, 1, 1, 713254440, 'LILIANA', 'SANCHEZ', 'ESCALANTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (377, 1, 1, 713254440, 'ELISABETH', 'SANCHEZ', 'LOPEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (378, 1, 1, 713254440, 'FERNANDO', 'SANCHEZ ', 'SISLEY', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (379, 1, 1, 713254440, 'CARLOS', 'SANCHEZ ', 'OYOLA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (380, 1, 1, 713254440, 'MILAGROS', 'SANCHEZ ', 'TELLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (381, 1, 1, 713254440, 'LURDES', 'SANCHEZ ', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (382, 1, 1, 713254440, 'JIMI', 'SANCHEZ ', 'ARAUJO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (383, 1, 1, 713254440, 'LUORDE', 'SANCHEZ ', 'LOPEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (384, 1, 1, 713254440, 'DANNYA', 'SANJINES', 'CARRILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (385, 1, 1, 713254440, 'DANNYA', 'SANJINEZ', 'CARRILLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (386, 1, 1, 713254440, 'SUSAN', 'SANTILLAN', 'MONDALGO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (387, 1, 1, 713254440, 'LISETH', 'SANTOS', 'FAJARDO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (388, 1, 1, 713254440, 'FLOR', 'SARAVIA', 'AVALOS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (389, 1, 1, 713254440, 'EDDYE', 'SEDANO', 'HUAMAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (390, 1, 1, 713254440, 'SILVIA', 'SEGALES', 'ALVAREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (391, 1, 1, 713254440, 'WILLY', 'SEGALES', 'SHALCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (392, 1, 1, 713254440, 'LAURA', 'SIESQUIEN', 'SANTA MARIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (393, 1, 1, 713254440, 'LAURA', 'SIESQUIEN', 'SANTA MARIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (394, 1, 1, 713254440, 'MAYRA', 'SIESQUIEN ', 'SANTA MARIA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (395, 1, 1, 713254440, 'MARITZA', 'SILVA', 'LA VALLE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (396, 1, 1, 713254440, 'RAFAEL', 'SILVA', 'LA VALLE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (397, 1, 1, 713254440, 'ROSSO', 'SILVA', 'ROJAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (398, 1, 1, 713254440, 'VERONICA', 'SILVA', 'SEGARRA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (399, 1, 1, 713254440, 'BETTY', 'SILVA', 'VELASQUEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (400, 1, 1, 713254440, 'VERONICA', 'SILVA', 'SEGALES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (401, 1, 1, 713254440, 'MAXIMO', 'SIMONIVIC', 'FUERTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (402, 1, 1, 713254440, 'DAVID', 'SOLANO', 'JULCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (403, 1, 1, 713254440, 'MANUEL', 'SOLANO', 'GUERRERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (404, 1, 1, 713254440, 'JOHANA', 'SOLARI', 'TELLO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (405, 1, 1, 713254440, 'NAZELI', 'SOLIS', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (406, 1, 1, 713254440, 'JESUS', 'SOLIS', 'VALVERDE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (407, 1, 1, 713254440, 'NAZLELI', 'SOLIS', 'FLORES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (408, 1, 1, 713254440, 'VICTOR', 'SOSA', 'RENGIFO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (409, 1, 1, 713254440, 'ROSARIO', 'SOSA', 'VILLALTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (410, 1, 1, 713254440, 'PEDRO', 'SOSA', 'RENGIFO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (411, 1, 1, 713254440, 'EDUARDO', 'SOSA', 'VILLALTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (412, 1, 1, 713254440, 'JOSE', 'SOTELO', 'ZELADA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (413, 1, 1, 713254440, 'ALONSO', 'SUAREZ', 'VALVERDE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (414, 1, 1, 713254440, 'JUAN', 'SUDUCO', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (415, 1, 1, 713254440, 'ELVIRA', 'TALLEDO', 'AREVALO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (416, 1, 1, 713254440, 'JOSE', 'TAMAYO', 'QUINTEROS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (417, 1, 1, 713254440, 'SILVIA', 'TAMAYO', 'BAUTISTA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (418, 1, 1, 713254440, 'ANA', 'TAPIA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (419, 1, 1, 713254440, 'MARITZA', 'TELLO', 'ALCALA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (420, 1, 1, 713254440, 'ROSA', 'TELLO', 'ANAMPA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (421, 1, 1, 713254440, 'MARITA', 'TELLO', 'ARROYO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (422, 1, 1, 713254440, 'JULIANA', 'TERRAZAS ', 'FARFAN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (423, 1, 1, 713254440, 'LISETH', 'TIRADO', 'SERRANO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (424, 1, 1, 713254440, 'PRUDENCIA', 'TOLENTINO', 'RIVERA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (425, 1, 1, 713254440, 'RAFAEL', 'TORREJON', 'CISNEROS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (426, 1, 1, 713254440, 'CLAUDIA', 'TORRES', 'CASTRO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (427, 1, 1, 713254440, 'JULIANA', 'TORRES', 'DE MONTES', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (428, 1, 1, 713254440, 'MARICIELO', 'TORRES', 'MARTINEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (429, 1, 1, 713254440, 'LAZARO', 'UGARTE', 'ALFARO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (430, 1, 1, 713254440, 'EDWIN', 'UMPIRE', 'ALVAREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (431, 1, 1, 713254440, 'LINO', 'UMPIRI', 'CANAZAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (432, 1, 1, 713254440, 'ELSA', 'VALDERRAMA', 'CURI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (433, 1, 1, 713254440, 'ROCIO', 'VALDERRAMA', 'OCHANTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (434, 1, 1, 713254440, 'PATRICIA', 'VALDERRAMA', 'OCHANTE', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (435, 1, 1, 713254440, 'SATURNINA', 'VALDEZ', 'CUBAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (436, 1, 1, 713254440, 'WENDY', 'VALLE', 'VILLANUEVA', 1, 50, 11111, '987488710', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (437, 1, 1, 713254440, 'ZONALIT', 'VALQUI', 'QUIPAL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (438, 1, 1, 713254440, 'ANTONIO', 'VALQUI', 'VALQUI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (439, 1, 1, 713254440, 'WILLIAN', 'VALQUI', 'CHUQUIMBALQUI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (440, 1, 1, 713254440, 'JORGE', 'VALVERDE', 'INO�AN', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (441, 1, 1, 713254440, 'JUAN', 'VALVERDE', 'PEREZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (442, 1, 1, 713254440, 'GLORIA', 'VARGAS', 'DIAZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (443, 1, 1, 713254440, 'MILAGRITOS', 'VASQUEZ', 'DE VELAZCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (444, 1, 1, 713254440, 'VERNARDITA', 'VASQUEZ', 'GUEVARA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (445, 1, 1, 713254440, 'NOJHA', 'VEGA', 'CABALLERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (446, 1, 1, 713254440, 'GIANPIERRE', 'VEGA', 'CABALLERO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (447, 1, 1, 713254440, 'JUAN ', 'VELA', 'CHAMOLI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (448, 1, 1, 713254440, 'HILDA', 'VERA', 'BARRIGA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (449, 1, 1, 713254440, 'ANA', 'VERA', 'DE CUEVAS', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (450, 1, 1, 713254440, 'JUAN', 'VILCA', 'MENDOZA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (451, 1, 1, 713254440, 'TERESA', 'VILCAPOMA', 'OLAZABAL', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (452, 1, 1, 713254440, 'JOSE', 'VILLANUEVA', 'ARTEAGA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (453, 1, 1, 713254440, 'ELIZABETH', 'VILLARREAL', 'HUANCAHUARI', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (454, 1, 1, 713254440, 'ADELMO', 'VILLARREAL ', 'ZAMUDIO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (455, 1, 1, 713254440, 'ALAN', 'YOPAN', 'CHAVEZ', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (456, 1, 1, 713254440, 'ANA', 'YOVERA', 'VILCA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (457, 1, 1, 713254440, 'LUCINDA', 'ZAMORA', 'MEDINA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (458, 1, 1, 713254440, 'ALDO', 'ZEGARRA', '', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (459, 1, 1, 713254440, 'ALDO', 'ZEGARRA', 'TORPOCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (460, 1, 1, 713254440, 'ALDO', 'ZEGARRA', 'TORPOCO', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (461, 1, 1, 713254440, 'ANIBAL', 'ZELADA', 'SILVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (462, 1, 1, 713254440, 'AIDA', 'ZELADA', 'SILVA', 1, 50, 11111, '', '2023-10-05', 'R');
+INSERT INTO public.clientes VALUES (463, 1, 1, 713254440, 'FRANCISCO', 'ZEVALLOS', 'HERNANDEZ', 1, 50, 11111, '', '2023-10-05', 'R');
 
 
 --
--- TOC entry 4891 (class 0 OID 16442)
+-- TOC entry 4895 (class 0 OID 16442)
 -- Dependencies: 219
 -- Data for Name: consultorio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -235,7 +782,7 @@ ALTER TABLE public.tipos_documentos OWNER TO postgres;
 
 
 --
--- TOC entry 4888 (class 0 OID 16413)
+-- TOC entry 4892 (class 0 OID 16413)
 -- Dependencies: 216
 -- Data for Name: doctores; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -243,7 +790,7 @@ ALTER TABLE public.tipos_documentos OWNER TO postgres;
 
 
 --
--- TOC entry 4894 (class 0 OID 16491)
+-- TOC entry 4898 (class 0 OID 16491)
 -- Dependencies: 222
 -- Data for Name: enfermedades; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -12674,7 +13221,7 @@ INSERT INTO public.enfermedades VALUES ('Z999', 'DEPENDENCIA DE MAQUINA Y DISPOS
 
 
 --
--- TOC entry 4895 (class 0 OID 16509)
+-- TOC entry 4899 (class 0 OID 16509)
 -- Dependencies: 223
 -- Data for Name: medicamentos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -12682,7 +13229,478 @@ INSERT INTO public.enfermedades VALUES ('Z999', 'DEPENDENCIA DE MAQUINA Y DISPOS
 
 
 --
--- TOC entry 4890 (class 0 OID 16430)
+-- TOC entry 4900 (class 0 OID 16552)
+-- Dependencies: 224
+-- Data for Name: pacientes1_TMP; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public."pacientes1_TMP" VALUES ('SALVADOR', 'ABARCA', 'JHONATAN', 23, NULL, 'CALLE K MZ LTE 7 EL ALAMO', 5373901, 964384729, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'ABARCA', 'PIERO', 5, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ABARCA', 'ACOSTA', 'MATIAs', NULL, NULL, '', 5373901, 980905997, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GARCIA', 'ACOSTA ', 'ANITA', 20, NULL, '', NULL, 929553720, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GARCIA', 'ACOSTA ', 'JENNY', 15, NULL, '', NULL, 929553720, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMOS', 'ACU�A', 'VICTOR', 65, NULL, 'AV: CASANAVE 1238', 5377201, 99017482, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RODRIGUEZ', 'AGUILAR', 'OSCAR', 67, NULL, 'JR GARCILASO DE LA VEGA 247   LA PASCANA', 5411355, 5360413, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SOTO', 'AGUILAR ', 'OFELIA', 60, NULL, 'PJE:  LOS ANGELES 186  SANTA LUZMILA ', 5303453, 989556721, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'ALARCON', 'ELBA', 21, NULL, 'MZ H LTE 2 3RA ETAPA SJB', 5395539, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'ALARCON', 'LOLA', 32, NULL, 'MZ LL LTE 8 ALBORADA', NULL, 992122109, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'ALARCON', 'IRMA', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SAAVEDRA', 'ALCANTARA', 'ALICIA', 41, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CASTILLO', 'ALVAREZ', 'MARIA', NULL, NULL, 'PJE JOSE OLAYA  125  CHACRA CERRO', 5375278, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'AMARO', 'BRISA', 34, NULL, 'JR PIMENTEL 374 SAN FELIPE', 5442630, NULL, '', 'KAROLINA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'AMARO', 'ANGELICA', 45, NULL, 'JR: PIMENTEL 374 SAN FELIPE', 6824714, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RUIZ', 'AMBROSIO', 'XHIANG', 3, NULL, '', 7711749, 975550826, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('COSME', 'ANTIVEROS', 'ARCELIA', 38, NULL, 'JR: MARIANO NECOCHEA 121', NULL, 950115642, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CUNTO', 'ANTONIO', 'RENE', 28, NULL, '', NULL, 988147952, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RORALES', 'APE�A', 'JENNY', 19, NULL, 'JR 2  DE MAYO 117  KM  11  PUNO', NULL, NULL, '', 'VANESA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RORALES', 'APE�A', 'MARIA', 17, NULL, 'JR 2  DE MAYO 117  KM  11  PUNO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IRRIGARRI', 'APONTE', 'ANGELA', 64, NULL, 'MZ K LTE  SANTA LUZMILA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MADUE�O', 'AQUIJE', 'ALEXANDER', 23, NULL, 'JR SAN JACINTO 263', 5574509, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MORENO', 'ARAUJO', 'JAZMIN', 21, NULL, 'MZ C LTE 13 VILLA SANTA ', NULL, 931014702, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MORENO', 'ARAUJO', 'ANGELICA', 29, NULL, 'MZ C LTE 13 VILLA SANTA ', NULL, 927043048, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SALINAS', 'ARAUZ', 'SARA', 46, NULL, 'CALLE CHIMU 131 TAHUANTINSUYO', 5267436, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'ARGUME', 'ELVIA', NULL, NULL, 'JR CAJA TAMBO 211 S J MIRAFLORES', 5414292, NULL, '', 'MAGNOLIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'ARGUME', 'ELVIA', 47, NULL, 'JR: CAJATAMBO 211', NULL, 993915647, '', 'MAGNOLIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BAUTISTA', 'ARI', 'ERIKA', 20, NULL, '', NULL, 9755621119, '', 'MAYUMI', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRILLO', 'ARRASCUE', 'JOSEPH', 9, NULL, 'AV CASANAVE  946 EL CARMEN BAJO', 5411168, 999505097, '', 'JULIAN', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRASCO', 'ARRASCUE', 'JULIO', 62, NULL, 'JR: RICARDO PALMA 179', 5395932, NULL, '', 'BALTAZAR', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENZALA', 'ATOCZA', 'ERICK', NULL, NULL, 'JR MARIA PARADO DE BELLIDO MZ C LTE 1 ', NULL, 992843343, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENZALA', 'ATOCZA', 'LURDES', NULL, NULL, 'JR MARIA PARADO DE BELLIDO MZ C LTE 1 ', NULL, 992843343, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENESES', 'AYLAS', 'MELISSA', 32, NULL, 'AV TUPAC AMARU  814', 5427803, 997765496, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AREVALO', 'BACHON', 'WILFREDO', 33, NULL, 'JR: BLASCO NU�EZ DE VELA 197', NULL, 954302418, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVAREEZ', 'BACHON', 'WILFREDO', 62, NULL, 'JR: BLASCO NU�EZ DE VELA  197', NULL, 934880294, '', 'ARMANDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MARTINEZ', 'BALBUENA', 'ANGIE', 21, NULL, 'CALLE   MAMA OCLLO  N�  137 2da SAN AGUSTIN COMAS', 5518457, 941160003, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RIVAS', 'BALBUENA', 'JESUS', 60, NULL, 'JR  GARCILASO DE LA VEGA 222', NULL, 9975993425, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MARTINEZ', 'BALBUENA', 'ANGIE', 21, NULL, 'CALLE MAMA OCLLO 137  SAN AGUSTIN,', NULL, 985322959, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VELEZ', 'BALCARCEL', 'CARLOS', 80, NULL, 'AV: CASANAVE 529', NULL, 996934900, '', 'ALBERTO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('YASPANA', 'BANDA', 'GILBERTO', 78, NULL, 'AV CASANAVE 498 EL CARMEN BAJO', NULL, 948888033, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GRACIA', 'BANDAN', 'NELSON', 44, NULL, '', NULL, 999927617, '', 'ADEMIRO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALENZUELA', 'BARDALES', 'ESTHEFANY', 6, NULL, 'COOP NSC MZ 1 LTE 35 COMAS', 5447268, 987523907, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALENZUELA', 'BARDALES', 'EMANUEL', 10, NULL, 'COOP NSC MZ 1 LTE 35 COMAS', 5447268, 987523907, '', 'JUAN ANTONIO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDRAGON', 'BARRANTES', 'GUILLERMO', 69, NULL, 'MZ  W LTE 1  EL ALAMO', NULL, 989652874, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROMERO', 'BARRETO', 'SANDRA', 43, NULL, 'JR PEDRO DE LA GASCA 263 EL CARMEN MEDIO', 5398050, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OLIVERA', 'BARRIGA', 'SANDRO', 26, NULL, 'JR LOS ANDES 177 CIUDAD DE CAMPO RIMAC', 3386593, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'BARZOLA', 'WALTER', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANTACRUZ', 'BAZAN', 'PASTORA', 61, NULL, 'LADERAS DE CHILLON MZ T2 LTE 1', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDRAGON', 'BECERRA', 'OSCAR', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BERROCAL', 'BECERRA', 'ARACELI', 13, NULL, 'JR CHIMU 122 INDEPENDENCIA', 5260701, 999308299, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDRAGON', 'BECERRA', 'SEGUNDO', 30, NULL, 'JR LOR COCRANE 365 EL CARMEN BAJO', NULL, 991704714, '', 'GRIMALDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDRAGON', 'BECERRA', 'GRIMALDO', 32, NULL, 'JR JOSE CARLOS MATIATEGUI 209 LA PASCANA', NULL, 997615445, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IGREDA', 'BECERRA', 'LUZ ', 70, NULL, 'JR: GENERAL MILLER 149', 5363638, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CASTILLO', 'BERROCAL', 'IRIS', 44, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BUITRON', 'BERROCAL', 'FABRICIO', 4, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HERRERA', 'BERROCAL', '', NULL, NULL, 'JR SAN IGNACIO 135 PALAO SMP', 5342110, 992319522, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HERRERA', 'BERROCAL', 'JESSICA', 34, NULL, 'JR SAN IGNACIO 135 PALAO SMP', 5342110, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CASTILLO', 'BERROCAL', 'ELEUTERIO', 64, NULL, 'JR SAN IGNACIO 135 PALAO SMP', 5342110, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SOVERO', 'BERROSPI', 'ROLANDO', 55, NULL, 'AV JOSE PARDO 102 EL CARMEN BAJO', 3945377, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CANTERAC', 'BERROSPI', 'KEVIN', 18, NULL, '', NULL, 982940657, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AQUINO', 'BURGOS', 'EDITH', 32, NULL, 'AV ANGELICA GAMARRA 727 LOS OLIVOS', 5330680, 98852067, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARBOZA', 'CABALLERO', 'SALIN', 20, NULL, 'Jr:  PEDRO DE LA GASCA 132 EL CARMEN MEDIO ', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TOLENTINO', 'CABALLERO', 'FLOR', 48, NULL, 'Jr:  PEDRO DE LA GASCA 132 EL CARMEN MEDIO ', 5416590, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'CABALLERO', 'SUSY', 56, NULL, 'JR: PEDRO DE LAS GASCAS ', 5416590, 992236837, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'CABRERA', 'MARECORY', 12, NULL, 'JR: SAN CAMILO 277 SAN CARLOS', 5430483, 999301112, '', 'ARACELI', 995420170, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MOSCOSO', 'CACERES', 'JOSE', NULL, NULL, '', NULL, NULL, '', 'CARLOS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MOSCOSO', 'CACERES', 'JOSE', 37, NULL, 'JR: MARIANO NECOCHEA 190', 5361957, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LETONA', 'CALDERON', 'JAVIER', 49, NULL, 'JR HUSARES DE JUNIN 260 CHACRO CERRO', 5362399, 988908687, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CALDERON', 'LESLY', 18, NULL, 'JR HUSARES DE JUNIN 260 CHACRO CERRO', 5362399, 997623435, '', 'ESTHEFANY', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CALDERON', 'JAVIER', 19, NULL, 'JR HUSARES DE JUNIN 260 CHACRO CERRO', 5362399, 991775646, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CALDERON', 'JAVIER', 23, NULL, 'JR: HUSARES DE JUNIN 260', 5362399, 946082326, '', '', 993802195, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CALDERON', 'LESLY', 21, NULL, 'JR: HUSARES DE JUNIN 260', 5362399, 991623435, '', 'ESTEPHANY', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TENAZOA', 'CALDERON ', 'ELENA', 51, NULL, 'JR : RAMOS CASTILLA 291', 5412173, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARDENAZ', 'CAMPOS', 'LUZ', 36, NULL, 'JR OCHO DE OCTUBRE 486 DPTO 206', 4609702, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'CAMPOS', 'ASUNCION', 80, NULL, 'JR OCHO DE OCTUBRE 486 DPTO 202', 4609702, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AYALA', 'CANTARO', 'VICTOR', 50, NULL, 'JR JOSE CARLOS MATIATEGUI 114 LA PASCANA', 5736625, 994728280, '', 'SELSO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AYALA', 'CANTARO', 'VICTOR', 59, NULL, 'JR: CARLOS MARIATEGUI 114', NULL, 9586320108, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PALOMINO', 'CARBAJAL', 'ANTONY', 6, NULL, 'AV FRANCISCO DE ZELA  143 3RA  ZONA DE COLLIQUE', 5582358, 925237566, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RIVERA', 'CARDENAS', 'VICTOR', 30, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'CARDENAS ', 'SHEYLA', 25, NULL, 'AAHH ALBERTO FUJIMORI MZ B LTE 5 ', NULL, 961784237, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE CAMPOS', 'CARDENAZ', 'LUZ', 69, NULL, 'JR OCHO DE OCTUBRE 486 DPTO 202', 4609702, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CARDERON', 'JAVIER', 26, NULL, 'JR: HUSARES DE JUNIN 260', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'CARDRON', 'JAVIER', 55, NULL, 'JR: HUSARES DE JUNIN 260', 5362399, 998195311, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONTOYA', 'CARRILLO', 'ALEX', 55, NULL, 'AV: TUPAC AMARU 1815', 6810906, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TORRES', 'CARRILLO', 'DIANA', 31, NULL, 'AV: CASANAVE 946  EL CARMEN', 5411168, 994354758, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANCHEZ', 'CARRION', 'JOLY', 46, NULL, 'JR: SANTA VIOLETA 391', NULL, 988512419, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANCHEZ', 'CASTA�EDA', 'DORIS', NULL, NULL, '', NULL, NULL, '', 'SUSANA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AYCHO', 'CASTILLO', 'VICTORIA', 46, NULL, 'JR GARCILASO DE LA VEGA 329 LA PASCANA', NULL, 987419387, '', 'HORTENCIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DUARTE', 'CASTILLO', 'INES', 67, NULL, 'JR: CUZCO 1532 CERCADO DE LIMA', NULL, 940335587, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DUARTE', 'CASTILLO', 'ENRRIQUE', 63, NULL, '', NULL, 993755745, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AYVAR', 'CCOPA', 'PRIMITIVA', 70, NULL, 'JR: HUAYLAS 662 CARABAYLLO', NULL, 985756810, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AYVAR', 'CCOPA', 'BERTHA', 77, NULL, 'JR: SAN MARTIN 210 SANTA ISABEL', 4871145, 980348710, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'CENTENO', 'NANCY', NULL, NULL, '', 41424374, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'CENTENO', 'NANCY', 38, NULL, '', NULL, 92363819, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HUISA', 'CESPEDES', 'ELENA', 42, NULL, 'MZ D6 LTE C LAS DELICIAS', NULL, 991645539, '', '', 984792591, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RIVERA', 'CHACALIAZA', 'MARTIN', 14, NULL, 'AV INDO AMERICA 220 TAHUANTINSUYO', 5263053, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VELA', 'CHAMOLI', 'LIZ', 15, NULL, 'JR: SAN CAMILO 282 SAN CARLOS COMAS', 5432008, 990836708, '', 'MILAGROS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AGUILAR', 'CHAMOLI', 'MARIANO', 60, NULL, 'JR: SAN CAMILO 282 SAN CARLOS COMAS', 5432008, 990836708, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROJAS', 'CHAMONES ', 'VALENTINA', 13, NULL, 'JR: FRANCISCO SALAVERRY 121 EL RETABLO', 5667827, 969538294, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'CHAMONES ', 'MARCO', NULL, NULL, 'JR: FRANCISCO SALAVERRY 121 EL RETABLO', 5667827, 969538294, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IPARRAGUIRRE', 'CHAPA�AN', 'JOSE', 8, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', 'ALEXIS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ACOSTA', 'CHAPA�AN', 'CARLOS', 35, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDACA', 'CHARLE', 'NICANOR', 72, NULL, 'CARLOS MARIATEGUI 112', 5410449, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TORRES', 'CHAVARRI', 'ALBERTO', 14, NULL, '', NULL, 9924419852, '', 'JUNIOR', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CHAVEZ', 'PEDRO', 62, NULL, 'CALLE MAMA OCCLLO 112 2DA SAN AGUSTIN', 2505366, 992112035, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('UNTOL', 'CHINGUEL', 'YENY', 36, NULL, '', NULL, 986168723, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OCHOA', 'CHOZO', 'DIEGO', 9, NULL, 'AV TOMAS VALLE 3015', 5330392, NULL, '', 'JESUS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OCHOA', 'CHOZO', 'DIEGO', 17, NULL, 'AV: TOMAS VALLE A G PTO 504 LOS OLIVOS', 5330692, 956350506, '', 'JESUS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PARIONA', 'CIPRIAN ', 'SAMANTHA', 17, NULL, 'AV: PEDRO DE LAS GASCA 227', NULL, 930986169, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORIHUELA', 'COLLAHUA', 'ANGEL', 6, NULL, 'JR CORONEL IGNACIO PRADO 230 CHACRA CERRO', 5367657, 5648830, '', 'ZAIR', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORIHUELA', 'COLLANTES', 'YADIRA', 13, NULL, 'JR: MARIANO NECOCHEA 126', NULL, 955408881, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALVERDE', 'COLQUEHUANCA ', 'ANGELO', 18, NULL, 'PJE LOS JAZMINES  PJE G LTE 10 ', NULL, 973695529, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RODRIGUEZ', 'COLQUI', 'KATTY', 14, NULL, 'JR CARLOS MARIATEGUI 172  LA PASCANA�', 4017954, 9992062280, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RODRIGUEZ', 'COLQUI', 'LUCERO', 8, NULL, 'JR CARLOS MARIATEGUI 172  LA PASCANA�', 4017954, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORDOVA', 'CORDOVA', 'HENRRY', 39, NULL, 'AV AVIACION 1011 DPTO B ', 5820636, 995305464, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MAMANI', 'CORDOVA', 'ROLY', 30, NULL, 'AV ARNALDO MARQUEZ 512 3RA ZONA COLLIQUE', 5201085, 987164009, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GARCIA', 'CORDOVA', 'JUNIOR', 10, NULL, 'AV: ARNALDO MARQUEZ 512 3RA ZONA COLLIQUE', 7214990, 991231971, '', 'RONALD', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GARCIA', 'CORDOVA', 'JASURI', 5, NULL, 'AV: ARNALDO MARQUEZ 512 3RA ZONA COLLIQUE', 7214990, 991231971, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALEGRIA', 'CORDOVA', 'MERI', 48, NULL, 'TOMAS VALLE    1530  LOS OLIVOS', 6331037, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ELIZABAL', 'CORONADO', 'CARMEN', 35, NULL, 'JR LIBERTAD 451 EL CARMEN BAJO', NULL, 994640437, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROJAS', 'CORONADO', 'ANGELICA', 38, NULL, 'JR PEDRO PAULET 279  LA PASCANA', 5415246, 988571953, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VELIZ', 'CORTEZ', 'MARITZA', 38, NULL, 'CALLE LAS ROSAS MZ B LTE 6 LA FLORIDA SMP', NULL, 95314907, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VIDAL ', 'CORTEZ', 'ANA', 21, NULL, 'CALLE LAS ROSAS MZ B LTE 6 LA FLORIDA SMP', NULL, NULL, '', 'PATRICIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VIDAL ', 'CORTEZ', 'PATY', 30, NULL, '', NULL, 916433995, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'CRISOSTOMO', 'NOEMI', 46, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'CRUZ', 'GALVINA', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'CUADROS', 'MAGALI', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('COVEMAS', 'CUADROS', 'GIAN', NULL, NULL, '', NULL, NULL, '', 'CARLOS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALARCON', 'CUBAS', 'JHONNY', 17, NULL, 'AV SINCHI ROCA MZ L LTE 7 ', NULL, NULL, '', 'ALEXANDER', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VARA', 'CUEVA', 'MELANY', 16, NULL, 'JR: CARLOS MARIATEGUI 280', 5414063, 985606738, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIMON', 'CUEVA', 'ENRRIQUE', 40, NULL, 'JR: CARLOS MARIATEGUI 193', 5414063, 985606738, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIMON', 'CUEVAS', 'JESUS', 21, NULL, 'JR CARLOS MARIATEGUI 193  LA PASCANA�', 5414063, 998074200, '', 'ALFREDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('YOPAN', 'CUIPAN', 'FAUSTO', 24, NULL, 'CALLE GARCILASO DE LA VEGA 143 SAN AGUSTIN', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'DAVILA', 'ANGEL', 32, NULL, '', 3530556, 954691339, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'DEL RIO', 'LUZ', NULL, NULL, 'JR MILLER 149 CHACRA  CERRO ', 5363638, NULL, '', 'MEDALY', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREDO', 'DEL RIO', 'JORGE', 56, NULL, 'JR MILLER 149 CHACRA  CERRO ', NULL, NULL, '', 'MANUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BECERRA', 'DEL RIO', 'ROCIO', 28, NULL, 'JR GENERAL MILLER  149', 5363638, 990935109, '', 'ISABEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FEREDO', 'DEL RIO', 'JORGE', 65, NULL, '', 5363638, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BECERRA', 'DEL RIO', 'JENNY', 38, NULL, 'JR: LILLER 149', 5363338, 996490464, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALARCON', 'DIAZ', 'EBERZON', 15, NULL, 'MZ H LTE 2 3RA ETAPA SJB', 5395539, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'DIAZ', 'EDUARDO', 28, NULL, '', NULL, 979308552, '', 'ALONSO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARRANTES', 'DIAZ', 'ALICIA', 50, NULL, 'JR CESAR VALLEJO 105', 5410093, 989005724, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GUERRERO', 'DIAZ', 'ANALY', 25, NULL, 'AV LOS INCAS 382 SJB 2DA  ETAPA', 5563402, 990707043, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CUBAS', 'DIAZ', 'AMADO', 61, NULL, 'AV LOS INCAS 382 SJB 2DA  ETAPA', 5563402, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GUERRERO', 'DIAZ', 'ANALI', 28, NULL, 'AV: LOS INCAS 382', 5563402, 980056925, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARRANTES', 'DIAZ', 'ALICIA', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'DIEGO', 'JHONY', 53, NULL, 'LOS ANGELES 140', NULL, 956551102, '', '', 948814961, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRION', 'DOMINGUEZ', 'FANNY', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VARA', 'DUE�AS', 'ZORAIDA', 67, NULL, 'JR: MARIA PARADO DE  BELLIDO 272 EL CARMEN', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'ESCALANTE', 'ANGIE', 12, NULL, 'PJE CAJAMARCA MZ B LTE 5 EL PINAR', 6573157, 997354517, '', 'MICHEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PINEDA', 'ESCOBAR', 'IRMA', NULL, NULL, 'JR LOR COCRANE 339 EL CARMEN BAJO', 5241185, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PI�EDA', 'ESCOBAR', 'IRMA', 58, NULL, 'JR: LOS COCRANE 339', 5241185, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROMAN', 'ESPINOZA', 'DANIEL', 9, NULL, 'JR: DANTE 860 DPTO 10 SURQUILLO', 2412887, 993397961, '', 'ALEJANDRO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROMAN', 'ESPINOZA', 'GUSTAVO', 12, NULL, 'JR: DANTE 860 DPTO 10 SURQUILLO', 2412887, 993397961, '', 'SAMUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROMAN', 'ESPINOZA', 'MIRIAN', 9, NULL, 'JR: DANTE 860 DPTO 10 SURQUILLO', 2412887, 993397961, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANTOS', 'ESTRADA ', 'MARIBEL', 22, NULL, 'SANTA ANITA LAS PRODERAS 1RA ETAPA', NULL, 990452883, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ZELADA', 'FAJARDO', 'LEONARDO', 7, NULL, 'AV LOS PINOS MZ 12 LTE 13 URB EL ALAMO', 5571075, 9891681883, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BEDOYA', 'FILIOS', 'MARIA', 30, NULL, 'CALLE LA TORRE UGARTE 120 MZ A1 LTE 4 ATE', 3561005, 993614474, '', 'ISABEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANCHEZ', 'FLORES', 'JESSICA', 35, NULL, 'JR FERNANDEZ 255 MIREFLORES', 4473794, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'FLORES', 'LUZ', 59, NULL, 'AV CASANAVE', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LESCANO', 'FLORES', 'PILAR', 34, NULL, 'JR ABRAHAN VALDELOMAR 180 LA PASCANA', NULL, 997716598, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRASCO', 'FLORES', 'MARIA', 30, NULL, 'PJE  BERNALDO ALCEDO 125  ', NULL, 9917650337, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROSALES', 'FLORES', 'MAXIMA', 60, NULL, 'JR CAJATAMBO 211 EL CARMEN ALTO', 5414291, 997977918, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GIMA', 'FLORES', 'MARIBEL', 37, NULL, 'CALLE FLORA TRISTAN 132 HUAQUILLAY', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CAHUATA', 'FLORES', 'JHON', 37, NULL, 'MZ D LTE 23 LAS ORQUIDEAS  CALLAO', NULL, 980908735, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMOS', 'FLORES', 'YNER', 36, NULL, 'CALLE 22 MZ K2 LTE 5 EL PINAR', NULL, 986731615, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HILARIO', 'FUERTES', 'CROMACIO', 79, NULL, 'JR JUAQUIN CAPELLA 127  LA PASCANA', NULL, 962302268, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MORALES', 'GAMARRA', 'FAUSTINA', 59, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRION', 'GARRIDO', 'GLADYS', 48, NULL, 'MZ A LTE 18 DEFENSORE DE LA PATRIA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'GIL', 'JUDITH', 42, 10401970, 'JR: MANUEL PRADO 414 CARABAYLLO', NULL, 99396605, 'yudell2011@gmail.com', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ATANACIO', 'GOMEZ', 'MARITZA', 50, NULL, '', NULL, 948638281, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'GONZALES ', 'FELIX', 72, NULL, 'AV JOSE DE SUCRE 117 EL CARMEN BAJO', 5414489, 945479921, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AGUILAR', 'GUERRERO', 'ALCIRA', 63, NULL, 'GARCILASO DE LA VEGA 251', 5411355, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALARCON', 'GUERRERO', 'NELLY', 56, NULL, 'AV LOS INCAS 382 SJB 2DA  ETAPA', 5572426, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORE', 'GUERREROS', 'TERESA', 54, NULL, 'MZ A LTE 9 VENTANILLA ALTA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORIHUIELA', 'GUEVARA', 'CECILIA', 15, NULL, 'JR: MARIANO NECOCHEA 182', 6596194, 979182396, '', 'BEATRIZ', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MAYUNTUPA', 'GUEVARA', 'THAMARA', 11, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'GUTIERREZ', 'AMERICO', 36, 80645007, 'SANTA ROSA  PUENTE PIEDRA', NULL, 997661107, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'HERCARNACION', 'VALENTIN', 58, NULL, 'JR VALENCIA 298 A�O NUEVO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LEON', 'HERNANDEZ', 'JESSENIA', 29, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OBLITAS', 'HERRERA', 'DANIELLY', 11, NULL, 'AV VIRGEN DEL CARMEN 235 EL CARMEN MEDIO', 5417163, 997317869, '', 'ODALIS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GAMARRA', 'HUAMAN', 'ISABEL', 37, NULL, 'JR LOS ALAMOS 328 LOS FICUS SANTA ANITA', NULL, NULL, '', 'DIANA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('REYES', 'HUAMAN', 'MILUSCA ', 16, NULL, 'JR GARCILASO DE LA VEGA 274 DPTO 401 LA PASCANA', 5416889, NULL, '', 'PRISILA DAYANE', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMOS', 'HUAMAN', 'ELENA', 22, 76503149, 'AV: JOSE GRANDA 2160 MSP', NULL, 975601458, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GAMARRA', 'HUAMAN', 'ISABEL', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONTOYA', 'HUAMAN', 'KAREN', 19, NULL, 'JR: PIMENTEL 355 SAN FELIPE COMAS', 5433641, 990707043, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORONADO', 'HUAMANCHANQUI ', 'IVETTE', 9, NULL, 'JR HUAYNACAPAC 177 EL CARMEN MEDIO', 5414114, 994917825, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORONADO', 'HUAMANCHANQUI ', 'HECTOR', 19, NULL, 'JR HUAYNACAPAC 177 EL CARMEN MEDIO', 5414114, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORONADO', 'HUAMANCHAQUI', 'IVETH', 17, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TENORIO', 'HUANCAHUARI', 'NICANOR', 65, NULL, 'JR CARLOS LISON 336 URB SAN AGUSTIN', 7802044, 994728280, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'HUANCAHUARI', 'EDITH', 51, NULL, '', 5405027, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORONADO', 'HUANCHAQUI', 'HECTOR', 18, NULL, 'JR HUAYNA CAPAC  177 EL CARMEN BAJO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HILARIO', 'HUAYTAN', 'VICTORIA', 68, NULL, 'JR  ABRAHAN VALDELOMAR 341 LA PASCANA', 55731, 988256588, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SAMBRANA', 'HUERTA', 'EDGAR', 25, NULL, 'LAS DALLAS MZ A LTE 16 LA ALBORADA', NULL, NULL, '', '', 990393484, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('POLO', 'INFANTES', 'NATHALY', 12, NULL, 'JR TACNA 595 A�O NUEVO', 5292485, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE SOSA', 'IPANAQUE', 'MARIA', 54, NULL, 'CALLE IMPERIO  130', NULL, 992092588, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'ANDRES', 42, NULL, 'DIOS ES AMOR 160 EL CARMEN MEDIO', 2506703, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'DELIA', 52, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'MABEL', 21, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', 'CELIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'EDUBISES', 44, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'SANTOS', 39, NULL, 'AV LOR COCRANE 580 EL CARMAN BAJO', 5414124, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIESQUIEN ', 'IPARRAGUIRRE', 'ARTURO', 17, NULL, '', NULL, 965952819, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VASQUEZ', 'IPARRAGUIRRE', 'VICKY', 56, NULL, 'AV: LOR COCRANE 580', NULL, 943515619, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIESQUIEN ', 'IPARRAGUIRRE', 'ANTONY', 15, NULL, 'CALLE DIOS ES AMOR 160 EL CARMEN ALTO', 2506703, 975298723, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENDOZA', 'JIMENEZ', 'JORGE', 30, NULL, 'JR CESAR  VALLEJO  174 ', NULL, 997147361, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHAVEZ', 'JOPAN', 'GABRIELA', 22, NULL, 'CALLE AYAR CACHI 135 SAN AGUSTIN', 5372848, 985401431, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VARGAS', 'JULCA', 'GLADYS', 53, NULL, 'JR CAHUIDE 377 SAN AGUSTIN', 5365700, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUISPE', 'JUSCAMAITA', 'VICTOR', 50, NULL, 'AV SANTA ROSA 467 SMP', 3816981, NULL, '', 'HUGO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUISPE', 'JUSCAMAITA', 'LUIS', NULL, NULL, '', NULL, NULL, '', 'ANTONIO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUISPE', 'JUSCAMAITA', 'PEPE', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUISPE', 'JUSCAMAITA', 'JORGE', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RICO', 'JUSCAMAITA', 'IRIS', 18, NULL, 'AV MARCOS CALDERON MZ Q LTE 7 II SECTO ', 5531933, 990378636, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'LA  VALLE', 'HERENIA', NULL, NULL, '', NULL, 988238879, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('REYES', 'LAGOS', 'ANDREA', 11, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SOTO', 'LAGOS', 'MANUEL', 51, NULL, 'JR: CARLOS MARIATEGUI 180 LAS PASCANA', NULL, 982169978, '', 'HENRRY', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SOTO', 'LAGOZ', 'JORGE', 38, NULL, 'JR CARLOS MARIATEGUI  161 LA PASCANA', 5415043, 997970715, '', 'MANUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TAPIA', 'LAZO', 'JESUS', 13, NULL, 'JR: 23 DE DICIEMBRE 187 INDEPENDENCIA', 6363687, 953617893, '', 'ANTONIO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TAPIA', 'LAZO', 'KIARA', 6, NULL, 'JR: 23 DE DICIEMBRE 187 INDEPENDENCIA', 6363687, 953617893, '', 'JADIRA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'LEIVA', 'DAVID', NULL, NULL, '', NULL, 994721912, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE AYARSA', 'LEON', 'CARMEN', NULL, NULL, 'CALLE 17 MZ U LTE 10 EL RETABLO', 5395249, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IGREGA', 'LIVIA', 'ELVA', 68, NULL, 'JR MANUEL VILLARAN 244 SMP', 4832402, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALIAGA', 'LIZAMA', 'DAVID', NULL, NULL, 'AV CASANAVE ', 6080237, 95724098, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BENITES', 'LIZAMA', 'JESSICA', 19, NULL, 'AV: CASANAVE 539 EL CARMEN', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SEDANO', 'LLACHUA', 'JACKELIN ', 22, NULL, '', NULL, NULL, '', 'KAREN', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SEDANO', 'LLACHUA', 'JESUS', 10, NULL, 'JR TARAPACA 112 2DA ZONA COLLIQUE', 5201661, 992256594, '', 'EDUARDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ARIAS', 'LLACTAYO', 'AMELIA', 64, NULL, 'JR: ANCASH 402', 2250123, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLAR', 'LLANTO ', 'JULIANA', 32, NULL, 'JR ABRAN VALDELOMAR 480 EL CARMEN BAJO', NULL, 980343266, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('POVEZ', 'LOAYZA', 'ESTHER', 64, NULL, 'JR JOSE CARLOS MARIATEGUI 146 LA PASCANA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALFARO', 'LOPEZ', 'ROGGER', 28, NULL, 'MZ J3 LTE 24 LOS ROSALES', NULL, 995119922, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHIRINOS', 'LOPEZ', 'JHONY', 38, NULL, 'MZ A LTE 10 LA ALBORADA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENDIETA', 'LOPEZ', 'JAIME', 44, NULL, 'AV  ANDRES AVELINO CACERES 125  1RA COLLIQUE', 5580910, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE LA CRUZ', 'LOPEZ', 'FELIX', 79, NULL, 'JR: SAUCES 245', 5351364, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUIJANO', 'LOPEZ ', 'FABRICIO', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRION', 'LUJAN', 'JENY', NULL, NULL, '', NULL, 987859373, '', 'ROSA JUDITH', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'MALDONADO', 'ANTONIO', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARDENAS', 'MALDONADO', 'HECTOR', 16, NULL, '', NULL, 949776099, '', 'MANUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORDOVA', 'MALDONADO', 'HECTOR', 15, NULL, 'TOMAS VALLE    1530  LOS OLIVOS', 6331037, NULL, '', 'MANUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORDOVA', 'MALDONADO', 'JAO', 8, NULL, 'TOMAS VALLE    1530  LOS OLIVOS', 6331037, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARZOLA', 'MALO', 'MILAGROS', 16, NULL, 'AV LAS ACACIAS MZ M LTE 10 LA ALBORADA', 5512498, 987660359, '', 'DEL PILAR', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARZOLA', 'MALO', 'ANDREA', 12, NULL, 'AV LAS ACACIAS MZ M LTE 10 LA ALBORADA', 5512498, 997317869, '', 'DEL PILAR', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARZOLA', 'MALO', 'ANDREA', 18, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('COSQUILLO', 'MAMANI', 'PEDRO', 12, NULL, 'JR: ANDRES BELLO 175 SAN AGUSTIN ', 5368318, 99003294, '', 'MIGUEL', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MAMANI', 'MAMANI', 'ROSARIO', 56, NULL, 'CALLE CHIRIMOYA MZ J LTE 4 SAN JUAN', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHERO', 'MANCHEGO', 'YULEYDI', 17, NULL, 'AV: MARIANO IGNACIO 962', 5410851, 981962542, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVA', 'MARINEZ', 'MARITZA', 41, NULL, 'CALLE   MAMA OCLLO  N�  137 2da SAN AGUSTIN COMAS', 5518457, 981914731, '', '', 985322959, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SILVA', 'MARI�AS', 'JOSELITO', 39, NULL, 'AV LA CAPILLA 978', 4828966, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MORALES', 'MARRE�O', 'GRACIELA', 44, NULL, 'JR: BLASCO NU�EZ DE VELA  342', NULL, 983221579, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TORRES', 'MARTEL', 'HASION', 22, NULL, 'AV :TUPAC AMARU 3580', NULL, 99724482, '', '', 972531661, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROCHA', 'MARTINEZ', '', 10, NULL, 'COOP EL CARMEN MZ J LTE 65 A�O NUEVO', 5322523, 994516713, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVA', 'MARTINEZ', 'MONICA', 41, NULL, 'CALLE MAMA OCLLO 137', NULL, 981635565, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MELGAREJO', 'MARTINEZ', 'LUCIANO', 68, NULL, 'AV: FAMESA MZ C LTE 6 PUENTE PIEDRA', NULL, 990100780, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'MAYUNTUPA', 'TANIA', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CASTILLONI', 'MAYUNTUPA', 'IKEYA', NULL, NULL, '', NULL, 995385014, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'MELENDEZ', 'MANUEL', 13, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CCANTO', 'MENA', 'NAYSHA', 20, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CCANTO', 'MENA', 'JUAN', 17, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CESPEDES', 'MENDOZA', 'JADIRA', 13, NULL, 'MZ D6 LTE C LAS DELICIAS', NULL, 991645539, '', '', 984792591, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CESPEDES', 'MENDOZA', 'MALAQUIES', 10, NULL, 'MZ D6 LTE C LAS DELICIAS', NULL, 991645539, '', '', 984792591, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MANCHA', 'MENDOZA', 'HUGO', 49, NULL, 'MZ D6 LTE C LAS DELICIAS', NULL, 991645539, '', '', 984792591, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRANZA', 'MENDOZA', 'MIGUEL', 32, NULL, '', NULL, 98063811, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALCANTARA', 'MENDOZA', 'MAGNA', 62, NULL, '', 6664484, 980238173, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PIMENTEL', 'MENESES', 'HAIDE', 50, NULL, 'AV CASANAVE 946', 5411168, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MERCI', 'MERCHI', 'ANGIELINA', 6, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORTEGA', 'MERINO', 'ARON', 26, NULL, 'JR PEDRO PAULET 345  LA PASCANA', 5412668, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RIVERA', 'MINAYA', 'LUZ', 48, NULL, 'AV WASHINTON 958 DPTO ', NULL, 993835910, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIGUE�AS', 'MINAYA', 'NILA', 27, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PIMENTEL', 'MNTOYA', 'IRMA', NULL, NULL, '', NULL, NULL, '', 'MARILU', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORE', 'MOISES', 'FERNANDO', 42, NULL, 'JR AYAR CACHI 105 SAN AGUSTIN', 5372427, NULL, '', '', 989168196, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CAPILLO', 'MOISES', 'ISABEL', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'MOLINA', 'FERNANDO', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LUNA', 'MONTESINOS', 'WILFREDO', 70, NULL, 'JR: CARLOS MARIATEGUI  299', 5411127, 995553760, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLACIS', 'MONTOYA', 'EMILIO', 69, NULL, 'JR PIMENTEL 355 SAN FELIPE', 5433641, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MEJIA', 'MONTOYA', 'ANGELICA', 40, NULL, 'JR PIMENTEL', 5433641, 996815160, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DIAZ', 'MOSQUIRO', 'SOLANSH', 22, NULL, 'JR ANTONIO GARLAND 599 SMP', 4824245, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LIVIA', 'MOSQUITO', 'JESSICA', 28, NULL, 'JR ANTONIO GARLAND 599 SMP', 4824245, NULL, '', 'LUZMILA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LIVIA', 'MOSQUITO', 'NANCY', 32, NULL, 'JR ANTONIO GARLAND 599 SMP', 4824245, 988256588, '', 'MARLENY', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SILVA', 'MOSQUITO ', 'MANUEL', NULL, NULL, 'JR ANTONIO GARLAND 599 SMP', 4824245, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GONZALES', 'MU�OZ', 'TEOFILO', 76, NULL, 'JR ABRAN VALDELOMAR 396 EL CARMEN BAJO', 5412834, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PERALTA', 'MU�OZ', 'ANA', 45, NULL, 'CALLE LA ABANA 111 EDIF 26 DPTO 402 CONDOMINIO', 3498605, NULL, '', 'MARIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRERA', 'MURGA', 'ALEJANDRO', 19, NULL, '', NULL, 955017949, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BELTRAN', 'NARCISO', 'AGUSTIN', 70, NULL, 'AV: PEDRO DE GASCA 162 EL CARMEN', 5414932, 976126948, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FRANCISCO', 'NU�EZ', 'FONSECA', 52, NULL, 'MZ C LTE 51 AASS LOS OLIVOS SMP', 5314051, NULL, '', '', 998349949, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'OCHOA', 'JOEL', 32, NULL, 'JR FAUSTINO SANCHEZ CARRION 209 ', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'OCHOA', 'PATRICIA', 35, NULL, '', 5330392, 98679055, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'OCHOA', 'JOEL', 39, NULL, '', NULL, 994919222, '', 'TOBIAS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORDOVA', 'OCUMANA', 'ISAMAR', 22, NULL, '', 6331037, 989117600, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'OLAYA', 'JOSE', 36, NULL, 'JR MARIANO NECOCHEA 212 CHACRA CERRO', 5377628, 980343266, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('JORGE', 'OLIVERA ', 'JOSE', 20, NULL, 'JR SAN LUCAS 424 SMP ', 7960367, NULL, '', 'EDUARDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUISPE', 'ORDINOLA', 'RAUL', 28, NULL, 'PJE CHOCANO 111 2DO PISO PARAMONGA', NULL, 9994413389, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MOISES', 'ORE', 'FERNANDO', 41, NULL, 'JR AYAR CACHI 105 ', 5374660, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROMERO', 'ORELLANO', 'GIANNA', 42, NULL, 'CALLE 5 MZ I LTE 62 PRO LIMA', 5401592, 992250078, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'ORIHUELA', 'ARACELI', 36, NULL, 'JR MARIANO NECOCHEA 188 CHACRA CERRO', 5373484, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'ORIHUELA', 'CECILIA', NULL, NULL, 'JR MARIANO NECOCHEA ', NULL, NULL, '', '', 997851472, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'ORIHUELA', 'MIRTHA', NULL, NULL, 'JR MARIANO NECOCHEA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'ORIHUELA ', 'CECILIA', 42, NULL, 'JR: MARIANO NECOCHEA 182', 6596194, 979182396, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLAFUERTE', 'ORTIZ', 'CARMEN', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FAJARDO', 'OSCO', 'ALFONSO', 51, NULL, 'JR PEDRO DE LA GASCA N* 189 EL CARMEN BAJO', 5410806, 969132305, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IRRAZABAL', 'OSCO', 'SULY', 25, NULL, 'AV PEDRO DE LA GASCA 189 ', 5410806, NULL, '', 'FRANCHESCA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ENCISO', 'OYOLA ', 'KATHERINE', 13, NULL, 'MZ P1 LTE 36 URB EL PINAR ', NULL, 986364580, '', 'LISET', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ENCISO', 'OYOLA ', 'CARLOS', 22, NULL, 'MZ P1 LTE 36 URB EL PINAR ', NULL, 940636502, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CONSAMUYO', 'PACHECO', 'BRAYAN', 23, NULL, 'MZ B LTE 15 SAN CARLOS', NULL, 964711829, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CONSAMUYO', 'PACHECO', 'LUCIANA', 14, NULL, 'MZ B LTE 15 SAN CARLOS', NULL, 964711829, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SILVA', 'PALACIOS', 'MARUJA', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MACAVILCA', 'PALOMINO', 'KATIUSKA', 24, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAYANO', 'PALOMINO', 'ESTHEFANY', 16, NULL, '', NULL, NULL, '', 'MARIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'PALOMINO', 'JOSE', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SALAZAR', 'PALOMINO', 'CIELO', 9, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVA', 'PALOMINO ', 'EDGAR', 18, NULL, 'JOSE GALVEZ 365 3RA ZONA  COLLIQUE', 5580032, 950938239, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FERNANDEZ', 'PARADA', 'MARISOL', 54, NULL, '', NULL, 947964957, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GAMBARINI', 'PARI', 'BLANCA', 59, NULL, 'AV LAS ACACIAS MZ M LTE 10 LA ALBORADA', 5512498, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROJAS', 'PARIONA', 'JEFFERSON', 16, NULL, 'AV PEDRO DE LA GASCA 180', 5736133, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROJAS', 'PARIONA', 'KEVIN', 12, NULL, 'AV PEDRO DE LA GASCA 132 EL CARMEN BAJO', 5376133, 993252569, '', 'JHONSON', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PRIALE', 'PARIONA', 'CELIA', 44, NULL, 'AV PEDRO DE LA GASCA 180 EL CARMEN BAJO', 2506206, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MINAYA', 'PARIONA', 'GABRIELA', 6, NULL, '', NULL, NULL, '', 'XILMARA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARDENAS', 'PARIONA', 'JUVENAL', 50, NULL, 'JR PEDRO DE LA GASCA N* 180 EL CARMEN BAJO', NULL, NULL, '', 'EDILBERTO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PRIALE', 'PARIONA', 'CELIA', 51, NULL, 'JR PEDRO DE LA GASCA 225', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DANAS', 'PAUCAR', 'TONY', 16, NULL, 'CALLE SANTO DOMINGO MZ U LTE 6 ERMITA�O ALTO', NULL, 992905818, '', 'ALDO', 994501054, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DANAS', 'PAUCAR', 'TONY', 16, NULL, 'CALLE SANTO  DOMINGO MZ U LTE 6 ERMITA�O ALTO', NULL, 992905818, '', 'ALDO', 976682959, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'PAZ', 'SUSANA', NULL, NULL, 'JR: HUSARES DE JUNIN 192 CHARA CERRO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ORCOSPOMA', 'PE�ALOZA', 'ALEXANDRA', 20, NULL, '', NULL, 923339111, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DEL RIO', 'PEREZ', 'FERNANDO', 8, NULL, 'JR GENERAL MILLER  149', 5363638, NULL, '', 'JESUS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DEL RIO', 'PEREZ', 'ANGEL', 5, NULL, 'JR GENERAL MILLER  149', 5363638, NULL, '', 'DANIELA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARRANTES', 'PEREZ', 'NORBERTO', 56, NULL, 'JR CESAR VALLEJO 105', 5410093, 997248429, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMIREZ', 'PEREZ', 'JAVIER', 30, NULL, '', NULL, 947117974, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SALAZAR', 'PEREZ', 'CESIA', 4, NULL, 'AV BLASCO NU�EZ DE VELA 348 EL CARMEN', 6664138, 963714117, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('IPARRAGUIRRE', 'PIZARRO', 'OMAR', 16, NULL, 'JR LOR COCRANE 180 EL CARMEN BAJO', 5414124, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DIAZ', 'PLAZA ', 'CHARLI', 42, NULL, '', NULL, 993438766, '', '', 990010338, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROCCA', 'POLO', 'JUANA', 35, NULL, 'JR TACNA 595 A�O NUEVO', 5292485, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROCCA', 'POLO', 'MARIANELA', 37, NULL, 'JR DAVID LEON 351 A�O NUEVO', NULL, 999105095, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CORTEZ', 'PORRAS', 'JHONNY', 21, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('POLO', 'PORRAS', 'ANDRES', 15, NULL, 'JR HUSARES DE JUNIN 126 CHACRA CERRO', NULL, 996654067, '', 'ALEXIS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('POLO', 'PORRAS', 'ANDREA', 11, NULL, 'JR HUSARES DE JUNIN 160 CHACRA CERRO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MATOS', 'PORTILLA', 'VICENTA', 65, NULL, 'PJE INCLAN 100 SANTA ROSA', 5410969, 992748964, '', 'MARIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CUNTO', 'PRADO', 'FERNANDO', 29, NULL, 'MZ LL TTE 3E  COVIMA', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PILCO', 'QUINTANA', 'GILMER', 49, NULL, 'JR: JOSE CARLOS MARIATEGUI 209', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VARGAS', 'QUINTEROS ', 'MIRIAN', 37, NULL, 'CALLE FEDERICO VILLARREAL  136 SAN AGUSTIN', NULL, 991450391, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MEJIA', 'QUISPE', 'EVA', 31, NULL, 'AV CASANAVE 351 EL CARMEN BAJO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ARGUME', 'QUISPE', 'MINERVA', 15, NULL, 'JR CAJATAMBO 211 EL CARMEN ALTO', 5414292, NULL, '', 'JAZMIN', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MIJA', 'QUISPE', 'MONICA', 16, NULL, 'JR: JOSE GALVEZ  162 COLLIQUE', 5584071, 968109306, '', 'MARIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MIJA', 'QUISPE', 'DIEGO', 12, NULL, 'JR: JOSE GALVEZ  162 COLLIQUE', 5584071, 968109306, '', 'ISALAD', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAUCAR', 'RAFAEL', 'HAYELEN', 7, NULL, 'CALLE SANTO DOMINGO MZ U LTE 6 ERMITA�O ALTO', 5232441, 992905818, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FERNANDEZ', 'RAMIREZ', 'NELLY', 58, NULL, 'JR PIMENTEL 374 SAN FELIPE', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OCHOA', 'RAMIREZ', 'HEBER', 36, NULL, '', 5248366, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('INFANTES', 'RAMIREZ', 'DAVID', 29, NULL, 'JR:GARCILASO DE LA VEGA 108', NULL, 917017981, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FERNANDEZ', 'RAMIREZ', 'SUSANA', 54, NULL, 'CALLE PIMENTEL 374', 6824714, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRISALES', 'RAMIREZ', 'KATHERINE', 26, NULL, 'JR: PIURA 133 CARABAYLLO', NULL, 950042082, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LLANTO', 'RAMOS', 'ANNY', 6, NULL, 'JR ABRAHAN VALDELOMAR 480', NULL, 980684519, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LLANTO', 'RAMOS', 'ANNY', 15, NULL, 'AV JOSE DE SUCRE 198  EL CARMEN BAJO', 5415324, 975292601, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LLANTO', 'RAMOS', 'RENZO', 17, NULL, 'AV JOSE DE SUCRE 198  EL CARMEN BAJO', 5415324, 936621631, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANCHEZ', 'REA�O ', 'VALENTINO', 8, NULL, '', NULL, 969422213, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CACEDA', 'REBASA', 'EDELMIRA', 67, NULL, 'AV VIRGEN DEL CARMEN 475 EL CARMEN MEDIO', 5376450, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LLANTO', 'REMOS', 'ANTUANE', 15, NULL, 'AV JOSE DE SUCRE 198  EL CARMEN BAJO', 5415324, 975292601, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DOMINGUEZ', 'RETUERTO', 'ISABEL', NULL, NULL, 'JR AYAR CACHI 105 SAN AGUSTIN', 5372427, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MARIN', 'REYES', 'DAILY', 40, NULL, 'JR JOSE CARLOS MARIATEGUI 163  LA PASCANA', 5415043, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GALARZA', 'REYES', 'BRENDA', 19, NULL, 'AV : CASANAVE 498 EL CARMEN BAJO ', NULL, 941171056, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VELARDE', 'RICO', 'WALTER', 35, NULL, '', NULL, 950166457, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PALACIOS', 'RICO', 'KIMBERLY', 21, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ESCAJADILLO', 'RIPAS ', 'NICOLAS', 61, NULL, 'PROLOG LOS ANGELES 186 SANTA LUZMILA', 5360413, 966306171, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAREDES', 'RIVAS', 'CRISTHIAN', 31, NULL, 'CALLE AYAR CACHI 117 SAN AGUSTIN', 5495606, 991081352, '', '', 996815160, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE ALCALA', 'RIVERA', 'AIDA', 61, NULL, 'AV REPUBLICA DE PERU 1458', 5360418, 991775646, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CUZCANO', 'RIVERA', 'AIDA', 68, NULL, 'AV: REPUBLICA DE PERU 1458', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GARCIA', 'ROCCA', 'OLGA', 65, NULL, 'JR TACNA 595 A�O NUEVO', 5292485, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAEZ', 'RODRIGUEZ', 'GLORIA', 39, NULL, 'JR CARLOS MARIATEGUI 172  LA PASCANA�', 4017954, 997609818, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAEZ', 'RODRIGUEZ', 'GLORIA', 41, NULL, 'JR CARLOS MARIATEGUI 172  LA PASCANA�', 4017954, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MINAYA', 'RODRIGUEZ', 'JOSE', 8, NULL, 'JR: WASHINTON 958', NULL, 999888540, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SABA', 'ROJAS', 'ALFREDO', 57, NULL, 'JR IGNACIO SUAREZ 230 CHACRA CERRO', 5363074, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANCHEZ', 'ROJAS', 'FELICITA', 72, NULL, 'JR ENRIQUE LOPEZ ALBUJAR 322 LA PASCANA', 5414428, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAZ', 'ROSAS', 'JAIRA', 30, NULL, 'JR HUSARES DE JUNIN 192 URB HUAQUILLA ', 5362793, 990935109, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PAZ', 'ROSAS', 'JAIRA', 35, NULL, 'JR HUISARES DE JUNIN 192 SAN AGUSTIN', 5362793, 967508020, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RAMOS', 'ROSAS', 'JUAN', 17, NULL, '', NULL, 939373942, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('URETA', 'SAENZ', 'ELENA', 47, NULL, 'JR: 9 DE DICIEMBRE 383', 4917329, 992588983, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SIFUENTES', 'SAIRE', 'ROSA', 61, NULL, 'AV: HURIN CUZCO 313 TAHUANTINSUYO', NULL, 967889801, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OLIVA', 'SALAZAR', 'FRANCISCO', 59, NULL, 'JR PEDRO DE LA GASCA N* 189 EL CARMEN BAJO', 5410923, 945479921, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BAUTISTA', 'SALAZAR ', 'SUSANA', 31, NULL, 'AV BLASCO NU�EZ DE VELA 348 EL CARMEN', 6021472, 963714117, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ISIDDRO', 'SALVATIERRA', 'RICARDO', 27, NULL, 'CALLE AYARA CACHI 116 2DA  ETAPA SAN AGUSTIN', 5368384, 999549342, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ESCALANTE', 'SANCHEZ', 'LILIANA', 78, NULL, 'SANTA VIOLETA 391', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LOPEZ', 'SANCHEZ', 'ELISABETH', 17, NULL, 'MZ P1LTE 36 EL PINAR', NULL, 940165955, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SISLEY', 'SANCHEZ ', 'FERNANDO', 28, NULL, 'JR JOSE OLAYA 412 CHARA CERRO', 5363638, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OYOLA', 'SANCHEZ ', 'CARLOS', 22, NULL, 'JR RAMON CASTILLA 275 EL CARMEN ALTO ', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TELLO', 'SANCHEZ ', 'MILAGROS', 23, NULL, 'AV MARIANO IGNACIO PRADO 256 EL CARMEN BAJO', 5320731, 994729307, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'SANCHEZ ', 'LURDES', NULL, NULL, '', NULL, 960560208, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ARAUJO', 'SANCHEZ ', 'JIMI', 30, NULL, 'CALLE IMPERIO 130--140', NULL, 948446751, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LOPEZ', 'SANCHEZ ', 'LUORDE', 30, NULL, 'MZ P1LTE 36 EL PINAR', NULL, 940165955, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRILLO', 'SANJINES', 'DANNYA', 6, NULL, 'AV: CASANAVE 946  EL CARMEN', 5411168, NULL, '', 'FERENANDA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CARRILLO', 'SANJINEZ', 'DANNYA', 6, NULL, 'AV CASANAVE  946 EL CARMEN BAJO', 5411168, NULL, '', 'FERNANDA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MONDALGO', 'SANTILLAN', 'SUSAN', 13, NULL, 'AV LA MARGINAL MZ A LTE 13 SALAMANCA', NULL, 994565651, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FAJARDO', 'SANTOS', 'LISETH', 25, NULL, 'JR: PIURA 668  LA BALANZA  COMAS ', NULL, 994369095, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AVALOS', 'SARAVIA', 'FLOR', 30, NULL, 'JR CHIMU 122 INDEPENDENCIA', 5260701, 999308299, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HUAMAN', 'SEDANO', 'EDDYE', 42, NULL, 'JR TARAPACA 112 2DA ZONA COLLIQUE', 5201661, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVAREZ', 'SEGALES', 'SILVIA', 23, NULL, 'JR JOSE OLAYA 125 CHACRA  CERRO', 5375278, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SHALCO', 'SEGALES', 'WILLY', 64, NULL, 'PJE JOSE OLAYA  125  CHACRA CERRO', 5375278, NULL, '', 'ARMANDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANTA MARIA', 'SIESQUIEN', 'LAURA', NULL, NULL, '', 2506703, 998674149, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANTA MARIA', 'SIESQUIEN', 'LAURA', 42, NULL, '', NULL, 998087161, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SANTA MARIA', 'SIESQUIEN ', 'MAYRA', 27, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LA VALLE', 'SILVA', 'MARITZA', 42, NULL, 'JR LA PEIRE 361 A�O NUEVO', 5420447, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('LA VALLE', 'SILVA', 'RAFAEL', 36, NULL, 'JR LA PEIRE 361 A�O NUEVO', 5420447, 91705666, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ROJAS', 'SILVA', 'ROSSO', 79, NULL, 'JR GERMAN LA PIERE 361 A�O NUEVO', 5420447, 997317869, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SEGARRA', 'SILVA', 'VERONICA', 31, NULL, 'JR: JOSE CARLOS MARIATEGUI 189', 5410517, 986652186, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VELASQUEZ', 'SILVA', 'BETTY', 32, NULL, 'JR: CARCAMO 118  EL CARM,EN BAJO', NULL, 937773040, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SEGALES', 'SILVA', 'VERONICA', 31, NULL, 'JR: CARLOS MARIATEGUI 189 LA PASCANA', 5410517, 997934483, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FUERTES', 'SIMONIVIC', 'MAXIMO', 9, NULL, 'JR: JUAQUIN CAPELLO 127', 5448786, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('JULCA', 'SOLANO', 'DAVID', 18, NULL, 'JR CAHUIDE 337 SAN AGUSTIN', 5365700, 991565367, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GUERRERO', 'SOLANO', 'MANUEL', 62, NULL, 'JR CAHUIDE 337', NULL, NULL, '', 'EDUARDO', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TELLO', 'SOLARI', 'JOHANA', 24, NULL, 'AV REPUBLICA DE PERU 1462 URB HUAQUILLAY', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'SOLIS', 'NAZELI', 6, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALVERDE', 'SOLIS', 'JESUS', 34, NULL, 'CALLE AYARA CACHI 116 2DA  ETAPA SAN AGUSTIN', 5368384, 999549342, '', 'WILMER', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FLORES', 'SOLIS', 'NAZLELI', 10, NULL, 'JR GENERAL VARELA 266 DPTO C  MIRAFLORES', 2559517, 988188034, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RENGIFO', 'SOSA', 'VICTOR', 40, NULL, 'CALLE IMPERIO 140 URB HUAQUILLAY', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLALTA', 'SOSA', 'ROSARIO', 22, NULL, 'CALLE IMPERIO 140 URB HUAQUILLAY', NULL, 990866816, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RENGIFO', 'SOSA', 'PEDRO', 53, NULL, 'CALLE IMPERIO 130', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLALTA', 'SOSA', 'EDUARDO', 23, NULL, 'CALLE IMPERIO 140 CHACRA CERRO COMAS', NULL, 962795524, '', 'MARTIN', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ZELADA', 'SOTELO', 'JOSE', 17, NULL, 'AV COLLIQUE MZ T2 LTE 23 URB EL ALAMO', 5571075, NULL, '', 'ENRRIQUE', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALVERDE', 'SUAREZ', 'ALONSO', 22, NULL, 'JR: GARCILASO DE LA VEGA 281', 5411195, 986227749, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'SUDUCO', 'JUAN', NULL, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('AREVALO', 'TALLEDO', 'ELVIRA', 43, NULL, 'AV: CASANAVE 730', NULL, 995776200, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUINTEROS', 'TAMAYO', 'JOSE', 77, NULL, 'AV CASANAVE 798 EL CARMAN BAJO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BAUTISTA', 'TAMAYO', 'SILVIA', 28, NULL, 'AV CASANAVE 798', 5648829, 993432768, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'TAPIA', 'ANA', 40, NULL, 'JR: 23 DE DICIEMBRE 187 INDEPENDENCIA', 6363687, 953617893, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALCALA', 'TELLO', 'MARITZA', 38, NULL, 'AV REPUBLICA DE PERU 1462 URB HUAQUILLAY', 5364022, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ANAMPA', 'TELLO', 'ROSA', 46, NULL, 'AV PUENTE PIEDRA  461', 44885697, 994380378, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ARROYO', 'TELLO', 'MARITA', NULL, NULL, 'AV: GARCVILASO DE LA VEGA 218', 6652579, 984725296, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('FARFAN', 'TERRAZAS ', 'JULIANA', 75, NULL, 'MZ B LTE 5 LAS VI�AS 1  SMP', 5282766, 988076867, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SERRANO', 'TIRADO', 'LISETH', 37, NULL, 'COOP VICTOR ANDRES BELAUNDE MZ  M LTE 7', 5274713, 941102955, '', 'HAYME', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('RIVERA', 'TOLENTINO', 'PRUDENCIA', 65, NULL, 'AV PEDRO DE LA GASCA 132 EL CARMEN BAJO', 5416590, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CISNEROS', 'TORREJON', 'RAFAEL', 47, NULL, 'JR: DIEGO VERDEJO 114  TUNGASUCA', 3693608, 93306359, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CASTRO', 'TORRES', 'CLAUDIA', 7, NULL, 'PJE SALCEDO 117 EL RETABLO', NULL, NULL, '', 'DANIELA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE MONTES', 'TORRES', 'JULIANA', 70, NULL, 'JR CRESPO CASTILLO 151 SAN AGUSTIN', NULL, 993324464, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MARTINEZ', 'TORRES', 'MARICIELO', 14, NULL, '', NULL, 992441982, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALFARO', 'UGARTE', 'LAZARO', 54, NULL, 'JR MARIANO NECOCHEA 121 CHACRA CERRO', 5372614, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ALVAREZ', 'UMPIRE', 'EDWIN', 23, NULL, 'PJE JOSE OLAYA  125  CHACRA CERRO', 5375278, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CANAZAS', 'UMPIRI', 'LINO', 59, NULL, 'PJE JOSE OLAYA  127 CHACRA CERRO', 5375870, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CURI', 'VALDERRAMA', 'ELSA', 29, NULL, 'JR ANDRES ALCA 149 ZAPALLAL', 5330392, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OCHANTE', 'VALDERRAMA', 'ROCIO', 4, NULL, 'URB SOL DEL PINAR MZ F4 LT 53 EL PINAR', 5571266, 989486182, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OCHANTE', 'VALDERRAMA', 'PATRICIA', 10, NULL, 'URB SOL DEL PINAR MZ F4 LT 53 EL PINAR', 5571266, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CUBAS', 'VALDEZ', 'SATURNINA', 65, NULL, 'AA HH VILLA MERCEDES  ALAMO DEL PACIFICO', 6764413, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILLANUEVA', 'VALLE', 'WENDY', 15, NULL, 'JR: SAN CAMILO 277  SAN CARLOS COMAS', 5430483, 989317557, '987488710', '', 940558911, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('QUIPAL', 'VALQUI', 'ZONALIT', 22, NULL, 'JR ALFA MZ Z  LTE 28 BOCA NEGRA ', NULL, 990935109, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VALQUI', 'VALQUI', 'ANTONIO', 25, NULL, 'JR ALFA MZ Z  LTE 28 BOCA NEGRA ', NULL, 993802195, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHUQUIMBALQUI', 'VALQUI', 'WILLIAN', 19, NULL, '', NULL, 991623435, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('INO�AN', 'VALVERDE', 'JORGE', 37, NULL, '', NULL, 991687611, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('PEREZ', 'VALVERDE', 'JUAN', 65, NULL, 'JR: CESAR VALLEJO 147', 5414164, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DIAZ', 'VARGAS', 'GLORIA', 32, NULL, 'JR CAJATAMBO 211 EL CARMEN ALTO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE VELAZCO', 'VASQUEZ', 'MILAGRITOS', 34, NULL, 'JR MARIANO NECOCHEA 212 CHACRA CERRO', 5362316, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('GUEVARA', 'VASQUEZ', 'VERNARDITA', 73, NULL, 'CALLE MAMA OCCLLO 112 2DA SAN AGUSTIN', 2505366, 993407073, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CABALLERO', 'VEGA', 'NOJHA', 21, NULL, 'Jr:  PEDRO DE LA GASCA 132 EL CARMEN MEDIO ', 5416590, 962388842, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CABALLERO', 'VEGA', 'GIANPIERRE', 17, NULL, 'Jr:  PEDRO DE LA GASCA 132 EL CARMEN MEDIO ', 5416590, 991081352, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHAMOLI', 'VELA', 'JUAN ', 23, NULL, 'JR: SAN FRANCISCO 378  -  380 SAN CARLOS', 4873707, 993365168, '', 'CARLOS', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('BARRIGA', 'VERA', 'HILDA', 52, NULL, 'PJ JOSE OLAYA 143 CHACRA CERRO', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('DE CUEVAS', 'VERA', 'ANA', 40, NULL, 'JR: CARLOS MARIATEGUI 193', 5414063, 985606738, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MENDOZA', 'VILCA', 'JUAN', 27, NULL, 'MZ U LTE 6 LOS CHASQUIS', 5247393, 988669809, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('OLAZABAL', 'VILCAPOMA', 'TERESA', 62, NULL, '', 5962903, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ARTEAGA', 'VILLANUEVA', 'JOSE', 44, NULL, '', NULL, 997955003, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HUANCAHUARI', 'VILLARREAL', 'ELIZABETH', 20, NULL, '', 7783820, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('ZAMUDIO', 'VILLARREAL ', 'ADELMO', 53, 32830488, 'JR: CARLOS LISSON ', 5405027, 952363731, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('CHAVEZ', 'YOPAN', 'ALAN', 23, NULL, 'JR AYAR CACHI 175 SAN AGUSTIN ', 5372848, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('VILCA', 'YOVERA', 'ANA', 10, NULL, '6', NULL, NULL, '', 'LUCIA', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('MEDINA', 'ZAMORA', 'LUCINDA', 20, NULL, 'MZ B LTE 5 VISTA ALEGRE COMAS ', NULL, 930801377, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('', 'ZEGARRA', 'ALDO', 35, NULL, 'AV CIRCUNVALACION 653 CONDOMINIO CORPAR', 3863350, 99612014, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TORPOCO', 'ZEGARRA', 'ALDO', 3, NULL, 'AV CIRCUNVALACION 653 CONDOMINIO CORPAR', 3863350, 99612014, '', 'SEBASTIAN', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('TORPOCO', 'ZEGARRA', 'ALDO', 13, NULL, 'AV CIRCUNVALACION 653 CONDOMINIO CORPAR', 3863350, 99612014, '', 'VICENTE', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SILVA', 'ZELADA', 'ANIBAL', 37, NULL, 'AV COLLIQUE MZ T2 LTE 23 URB EL ALAMO', 5570573, 990922932, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('SILVA', 'ZELADA', 'AIDA', NULL, NULL, '', 5571075, 9891681883, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public."pacientes1_TMP" VALUES ('HERNANDEZ', 'ZEVALLOS', 'FRANCISCO', 13, NULL, '', NULL, NULL, '', '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+
+
+--
+-- TOC entry 4894 (class 0 OID 16430)
 -- Dependencies: 218
 -- Data for Name: sedes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -12690,23 +13708,25 @@ INSERT INTO public.enfermedades VALUES ('Z999', 'DEPENDENCIA DE MAQUINA Y DISPOS
 
 
 --
--- TOC entry 4889 (class 0 OID 16425)
+-- TOC entry 4893 (class 0 OID 16425)
 -- Dependencies: 217
 -- Data for Name: sexos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.sexos VALUES (1, 'Masculino');
 
 
 --
--- TOC entry 4887 (class 0 OID 16408)
+-- TOC entry 4891 (class 0 OID 16408)
 -- Dependencies: 215
 -- Data for Name: tipos_documentos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.tipos_documentos VALUES (1, 'DNI', 8, true);
 
 
 --
--- TOC entry 4732 (class 2606 OID 16475)
+-- TOC entry 4736 (class 2606 OID 16475)
 -- Name: citas pk_citas; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12715,7 +13735,7 @@ ALTER TABLE ONLY public.citas
 
 
 --
--- TOC entry 4730 (class 2606 OID 16458)
+-- TOC entry 4734 (class 2606 OID 16458)
 -- Name: clientes pk_clientes; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12724,7 +13744,7 @@ ALTER TABLE ONLY public.clientes
 
 
 --
--- TOC entry 4728 (class 2606 OID 16446)
+-- TOC entry 4732 (class 2606 OID 16446)
 -- Name: consultorio pk_consultorios; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12733,7 +13753,7 @@ ALTER TABLE ONLY public.consultorio
 
 
 --
--- TOC entry 4722 (class 2606 OID 16419)
+-- TOC entry 4726 (class 2606 OID 16419)
 -- Name: doctores pk_doctor; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12742,7 +13762,7 @@ ALTER TABLE ONLY public.doctores
 
 
 --
--- TOC entry 4720 (class 2606 OID 16412)
+-- TOC entry 4724 (class 2606 OID 16412)
 -- Name: tipos_documentos pk_documentos; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12751,7 +13771,7 @@ ALTER TABLE ONLY public.tipos_documentos
 
 
 --
--- TOC entry 4734 (class 2606 OID 16499)
+-- TOC entry 4738 (class 2606 OID 16499)
 -- Name: enfermedades pk_enfermedad; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12760,7 +13780,7 @@ ALTER TABLE ONLY public.enfermedades
 
 
 --
--- TOC entry 4736 (class 2606 OID 16515)
+-- TOC entry 4740 (class 2606 OID 16515)
 -- Name: medicamentos pk_medicina; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12769,7 +13789,7 @@ ALTER TABLE ONLY public.medicamentos
 
 
 --
--- TOC entry 4726 (class 2606 OID 16436)
+-- TOC entry 4730 (class 2606 OID 16436)
 -- Name: sedes pk_sedes; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12778,7 +13798,7 @@ ALTER TABLE ONLY public.sedes
 
 
 --
--- TOC entry 4724 (class 2606 OID 16429)
+-- TOC entry 4728 (class 2606 OID 16429)
 -- Name: sexos pk_sexos; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12787,7 +13807,7 @@ ALTER TABLE ONLY public.sexos
 
 
 --
--- TOC entry 4737 (class 2606 OID 16420)
+-- TOC entry 4741 (class 2606 OID 16420)
 -- Name: doctores fk_3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12796,7 +13816,7 @@ ALTER TABLE ONLY public.doctores
 
 
 --
--- TOC entry 4741 (class 2606 OID 16476)
+-- TOC entry 4745 (class 2606 OID 16476)
 -- Name: citas fk_cliente_citas; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12805,7 +13825,7 @@ ALTER TABLE ONLY public.citas
 
 
 --
--- TOC entry 4742 (class 2606 OID 16481)
+-- TOC entry 4746 (class 2606 OID 16481)
 -- Name: citas fk_consultorio_cita; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12814,7 +13834,7 @@ ALTER TABLE ONLY public.citas
 
 
 --
--- TOC entry 4743 (class 2606 OID 16486)
+-- TOC entry 4747 (class 2606 OID 16486)
 -- Name: citas fk_doctor_citas; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12823,7 +13843,7 @@ ALTER TABLE ONLY public.citas
 
 
 --
--- TOC entry 4738 (class 2606 OID 16447)
+-- TOC entry 4742 (class 2606 OID 16447)
 -- Name: consultorio fk_sede_consultorio; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12832,7 +13852,7 @@ ALTER TABLE ONLY public.consultorio
 
 
 --
--- TOC entry 4739 (class 2606 OID 16464)
+-- TOC entry 4743 (class 2606 OID 16464)
 -- Name: clientes fk_sexo_clientes; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12841,7 +13861,7 @@ ALTER TABLE ONLY public.clientes
 
 
 --
--- TOC entry 4740 (class 2606 OID 16459)
+-- TOC entry 4744 (class 2606 OID 16459)
 -- Name: clientes fk_tipodoc_clientes; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12849,7 +13869,7 @@ ALTER TABLE ONLY public.clientes
     ADD CONSTRAINT fk_tipodoc_clientes FOREIGN KEY (id_doc) REFERENCES public.tipos_documentos(id_doc);
 
 
--- Completed on 2023-09-28 20:52:18
+-- Completed on 2023-10-05 21:35:31
 
 --
 -- PostgreSQL database dump complete
