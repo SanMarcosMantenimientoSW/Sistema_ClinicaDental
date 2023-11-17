@@ -1,0 +1,201 @@
+prompt --application/pages/page_00002
+begin
+--   Manifest
+--     PAGE: 00002
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.10.31'
+,p_release=>'23.2.0-20'
+,p_default_workspace_id=>26098533995257605975
+,p_default_application_id=>125624
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_WSAPEXMIGUELCALDERON'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>2
+,p_name=>'RESUMEN CITAS'
+,p_alias=>'RESUMEN-CITAS'
+,p_step_title=>'RESUMEN CITAS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_last_updated_by=>'THEMACHARGER03GG@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20231116235844'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(18328181164228173855)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(18322172039076071817)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(18322056349883071769)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_imp.id(18322834403449071845)
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(18328181878338173856)
+,p_plug_name=>'RESUMEN CITAS'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(18322149804553071808)
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'DENTAL_RESUMEN_CITAS'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_page_header=>'RESUMEN CITAS'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(18328181937459173856)
+,p_name=>'RESUMEN CITAS'
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'THEMACHARGER03GG@GMAIL.COM'
+,p_internal_uid=>18328181937459173856
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328182311786173972)
+,p_db_column_name=>'ID_CITA'
+,p_display_order=>1
+,p_column_identifier=>'A'
+,p_column_label=>'Id Cita'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328182786390173973)
+,p_db_column_name=>'DESCR_CITA'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Descr Cita'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328183141045173973)
+,p_db_column_name=>'IDCLIENTE'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Idcliente'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328183504487173973)
+,p_db_column_name=>'FECHA_INI'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Fecha Ini'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328183976567173973)
+,p_db_column_name=>'FECHA_FIN'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Fecha Fin'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328184301111173973)
+,p_db_column_name=>'UBICACION'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>'Ubicacion'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328184742454173974)
+,p_db_column_name=>'NOMBRE'
+,p_display_order=>7
+,p_column_identifier=>'G'
+,p_column_label=>'Nombre'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328185176686173974)
+,p_db_column_name=>'APELLIDO_PATERNO'
+,p_display_order=>8
+,p_column_identifier=>'H'
+,p_column_label=>'Apellido Paterno'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328185657667173974)
+,p_db_column_name=>'DIRECCION'
+,p_display_order=>9
+,p_column_identifier=>'I'
+,p_column_label=>'Direccion'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328186099309173974)
+,p_db_column_name=>'SEDE_TELEFONO'
+,p_display_order=>10
+,p_column_identifier=>'J'
+,p_column_label=>'Sede Telefono'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(18328186446201173975)
+,p_db_column_name=>'NOMBRE_SEDE'
+,p_display_order=>11
+,p_column_identifier=>'K'
+,p_column_label=>'Nombre Sede'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(18328193389414176428)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'183281934'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ID_CITA:DESCR_CITA:IDCLIENTE:FECHA_INI:FECHA_FIN:UBICACION:NOMBRE:APELLIDO_PATERNO:DIRECCION:SEDE_TELEFONO:NOMBRE_SEDE'
+);
+wwv_flow_imp.component_end;
+end;
+/
