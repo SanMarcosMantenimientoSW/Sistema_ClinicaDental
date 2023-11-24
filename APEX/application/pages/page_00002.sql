@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'THEMACHARGER03GG@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20231123225150'
+,p_last_upd_yyyymmddhh24miss=>'20231124011903'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(18328181164228173855)
@@ -45,13 +45,38 @@ wwv_flow_imp_page.create_page_plug(
 ,p_query_table=>'DENTAL_RESUMEN_CITAS'
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IR'
+,p_prn_units=>'MILLIMETERS'
+,p_prn_paper_size=>'A4'
+,p_prn_width=>297
+,p_prn_height=>210
+,p_prn_orientation=>'HORIZONTAL'
 ,p_prn_page_header=>'RESUMEN CITAS'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
 );
 wwv_flow_imp_page.create_worksheet(
- p_id=>wwv_flow_imp.id(18328181937459173856)
-,p_name=>'RESUMEN CITAS'
-,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
-,p_no_data_found_message=>'No data found.'
+ p_id=>wwv_flow_imp.id(22554178941413116805)
+,p_max_row_count=>'1000000'
 ,p_pagination_type=>'ROWS_X_TO_Y'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
@@ -61,129 +86,138 @@ wwv_flow_imp_page.create_worksheet(
 ,p_download_formats=>'CSV:HTML:XLSX:PDF'
 ,p_enable_mail_download=>'Y'
 ,p_owner=>'THEMACHARGER03GG@GMAIL.COM'
-,p_internal_uid=>18328181937459173856
+,p_internal_uid=>22554178941413116805
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328182311786173972)
+ p_id=>wwv_flow_imp.id(22554179071890116806)
 ,p_db_column_name=>'ID_CITA'
-,p_display_order=>1
+,p_display_order=>10
 ,p_column_identifier=>'A'
-,p_column_label=>'# Cita'
+,p_column_label=>'# CITA'
 ,p_column_type=>'NUMBER'
 ,p_heading_alignment=>'RIGHT'
 ,p_column_alignment=>'RIGHT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328183141045173973)
-,p_db_column_name=>'IDCLIENTE'
-,p_display_order=>11
+ p_id=>wwv_flow_imp.id(22554179233077116808)
+,p_db_column_name=>'CLI_NOMBRE'
+,p_display_order=>30
 ,p_column_identifier=>'C'
-,p_column_label=>'Cliente'
-,p_column_type=>'NUMBER'
-,p_heading_alignment=>'RIGHT'
-,p_column_alignment=>'RIGHT'
+,p_column_label=>'NOMBRE PACIENTE'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328183504487173973)
-,p_db_column_name=>'FECHA_INI'
-,p_display_order=>21
+ p_id=>wwv_flow_imp.id(22554179381508116809)
+,p_db_column_name=>'CLI_APELLIDO_PAT'
+,p_display_order=>40
 ,p_column_identifier=>'D'
-,p_column_label=>'Hora ingreso'
-,p_column_type=>'DATE'
-,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328184742454173974)
-,p_db_column_name=>'NOMBRE'
-,p_display_order=>31
-,p_column_identifier=>'G'
-,p_column_label=>'Doctor'
+,p_column_label=>'APELLIDO PACIENTE'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328186446201173975)
-,p_db_column_name=>'NOMBRE_SEDE'
-,p_display_order=>41
-,p_column_identifier=>'K'
-,p_column_label=>'Sede'
+ p_id=>wwv_flow_imp.id(22554179770495116813)
+,p_db_column_name=>'DOC_NOMBRE'
+,p_display_order=>50
+,p_column_identifier=>'H'
+,p_column_label=>'Doc Nombre'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328182786390173973)
-,p_db_column_name=>'DESCR_CITA'
-,p_display_order=>51
-,p_column_identifier=>'B'
-,p_column_label=>'Descripcion'
+ p_id=>wwv_flow_imp.id(22554179812224116814)
+,p_db_column_name=>'DOC_APELLIDO_PATERNO'
+,p_display_order=>60
+,p_column_identifier=>'I'
+,p_column_label=>'Doc Apellido Paterno'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328183976567173973)
-,p_db_column_name=>'FECHA_FIN'
-,p_display_order=>61
+ p_id=>wwv_flow_imp.id(22554179440324116810)
+,p_db_column_name=>'FECHA_INI'
+,p_display_order=>70
 ,p_column_identifier=>'E'
-,p_column_label=>'Hora Fin'
-,p_column_type=>'DATE'
+,p_column_label=>'HORA INICIO'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328184301111173973)
-,p_db_column_name=>'UBICACION'
-,p_display_order=>71
+ p_id=>wwv_flow_imp.id(22554179156909116807)
+,p_db_column_name=>'DESCR_CITA'
+,p_display_order=>80
+,p_column_identifier=>'B'
+,p_column_label=>'NOTAS'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(22554179555551116811)
+,p_db_column_name=>'FECHA_FIN'
+,p_display_order=>90
 ,p_column_identifier=>'F'
+,p_column_label=>'HORA FIN'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(22554179696671116812)
+,p_db_column_name=>'UBICACION'
+,p_display_order=>100
+,p_column_identifier=>'G'
 ,p_column_label=>'Ubicacion'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328185176686173974)
-,p_db_column_name=>'APELLIDO_PATERNO'
-,p_display_order=>91
-,p_column_identifier=>'H'
-,p_column_label=>'Apellido Doctor'
-,p_column_type=>'STRING'
-,p_heading_alignment=>'LEFT'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328185657667173974)
+ p_id=>wwv_flow_imp.id(22554179926488116815)
 ,p_db_column_name=>'DIRECCION'
-,p_display_order=>101
-,p_column_identifier=>'I'
+,p_display_order=>110
+,p_column_identifier=>'J'
 ,p_column_label=>'Direccion'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(18328186099309173974)
+ p_id=>wwv_flow_imp.id(22554180027707116816)
 ,p_db_column_name=>'SEDE_TELEFONO'
-,p_display_order=>111
-,p_column_identifier=>'J'
+,p_display_order=>120
+,p_column_identifier=>'K'
 ,p_column_label=>'Sede Telefono'
 ,p_column_type=>'NUMBER'
-,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(22554180124380116817)
+,p_db_column_name=>'NOMBRE_SEDE'
+,p_display_order=>130
+,p_column_identifier=>'L'
+,p_column_label=>'Nombre Sede'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
- p_id=>wwv_flow_imp.id(18328193389414176428)
+ p_id=>wwv_flow_imp.id(22554194106667123614)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
-,p_report_alias=>'183281934'
+,p_report_alias=>'225541942'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
-,p_report_columns=>'ID_CITA:DESCR_CITA:IDCLIENTE:FECHA_INI:FECHA_FIN:UBICACION:NOMBRE:APELLIDO_PATERNO:DIRECCION:SEDE_TELEFONO:NOMBRE_SEDE'
+,p_report_columns=>'ID_CITA:CLI_NOMBRE:CLI_APELLIDO_PAT:DOC_NOMBRE:DOC_APELLIDO_PATERNO:FECHA_INI:DESCR_CITA:FECHA_FIN:UBICACION:DIRECCION:SEDE_TELEFONO:NOMBRE_SEDE'
 );
 wwv_flow_imp.component_end;
 end;

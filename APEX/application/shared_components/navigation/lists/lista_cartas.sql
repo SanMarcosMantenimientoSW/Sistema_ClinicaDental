@@ -32,6 +32,14 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_icon=>'fa-clipboard-edit'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(22552173489078363437)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Registrar Paciente'
+,p_list_item_link_target=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:5:::'
+,p_list_item_icon=>'fa-address-book'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
 wwv_flow_imp.component_end;
 end;
 /
