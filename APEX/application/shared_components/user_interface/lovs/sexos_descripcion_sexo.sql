@@ -1,7 +1,7 @@
-prompt --application/shared_components/user_interface/lovs/clientes_nombre
+prompt --application/shared_components/user_interface/lovs/sexos_descripcion_sexo
 begin
 --   Manifest
---     CLIENTES.NOMBRE
+--     SEXOS.DESCRIPCION_SEXO
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2023.10.31'
@@ -12,14 +12,14 @@ wwv_flow_imp.component_begin (
 ,p_default_owner=>'WKSP_WSAPEXMIGUELCALDERON'
 );
 wwv_flow_imp_shared.create_list_of_values(
- p_id=>wwv_flow_imp.id(18332122779427659757)
-,p_lov_name=>'CLIENTES.NOMBRE'
+ p_id=>wwv_flow_imp.id(22533082835565834998)
+,p_lov_name=>'SEXOS.DESCRIPCION_SEXO'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'
-,p_query_table=>'CLIENTES'
-,p_return_column_name=>'IDCLIENTE'
-,p_display_column_name=>'NOMBRE'
-,p_default_sort_column_name=>'NOMBRE'
+,p_query_table=>'SEXOS'
+,p_return_column_name=>'ID_SEXO'
+,p_display_column_name=>'DESCRIPCION_SEXO'
+,p_default_sort_column_name=>'DESCRIPCION_SEXO'
 ,p_default_sort_direction=>'ASC'
 );
 wwv_flow_imp.component_end;

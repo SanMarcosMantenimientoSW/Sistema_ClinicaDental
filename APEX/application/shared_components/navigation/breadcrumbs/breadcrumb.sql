@@ -5,7 +5,7 @@ begin
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2023.10.31'
-,p_release=>'23.2.0-20'
+,p_release=>'23.2.0'
 ,p_default_workspace_id=>26098533995257605975
 ,p_default_application_id=>125624
 ,p_default_id_offset=>0
@@ -38,6 +38,12 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_short_name=>'Registrar Cita'
 ,p_link=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
 ,p_page_id=>4
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(22533081842418834897)
+,p_short_name=>'Registrar Paciente'
+,p_link=>'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>5
 );
 wwv_flow_imp.component_end;
 end;

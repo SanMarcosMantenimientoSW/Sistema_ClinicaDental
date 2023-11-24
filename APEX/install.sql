@@ -29,6 +29,8 @@ prompt --install
 @@application/shared_components/user_interface/lovs/consultorio_ubicacion.sql
 @@application/shared_components/user_interface/lovs/doctores_nombre.sql
 @@application/shared_components/user_interface/lovs/email_username_format.sql
+@@application/shared_components/user_interface/lovs/sexos_descripcion_sexo.sql
+@@application/shared_components/user_interface/lovs/tipos_documentos_nombre_doc.sql
 @@application/pages/page_groups.sql
 @@application/comments.sql
 @@application/shared_components/navigation/breadcrumbs/breadcrumb.sql
@@ -125,6 +127,7 @@ prompt --install
 @@application/pages/page_00001.sql
 @@application/pages/page_00002.sql
 @@application/pages/page_00004.sql
+@@application/pages/page_00005.sql
 @@application/pages/page_09999.sql
 @@application/pages/page_10000.sql
 @@application/pages/page_10010.sql
